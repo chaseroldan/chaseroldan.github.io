@@ -402,6 +402,6 @@ function queryByMonth(monthNumber, data){
 
         var paragraphReturn = `In this month the reported average temperature was at ${avTemp/100}°F, the minimum temperature was ${Math.min(...minTemp)}°F,
         and the maximum got up to ${Math.max(...maxTemp)}°F. \n\n
-        Aditionally, the total amount of deaths reported in this month represent the ${porcentages/100}% of total deaths registered in Los Angeles City during 2019 due to car collisions.`
+        Additionally, the total amount of deaths reported in this month represent the ${porcentages/100}% of total deaths registered in Los Angeles City during 2019 due to car collisions.`
         return paragraphReturn;
     }

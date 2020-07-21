@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-right">
+        <h1 class="navbar-brand" href="#">Los Angeles City's CAR COLLISIONS 2019</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="#">Yearly <span class="sr-only">(current)</span></a>
+              </li> -->
+            <li class="nav-item dropdown text-right">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SELECT A MONTH
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button id="january" class="dropdown-item" type="button">January</button>
+                <button id="february" class="dropdown-item" type="button">February</button>
+                <button id="march" class="dropdown-item" type="button">March</button>
+                <button id="april" class="dropdown-item" type="button">April</button>
+                <button id="may" class="dropdown-item" type="button">May</button>
+                <button id="june" class="dropdown-item" type="button">June</button>
+                <button id="july" class="dropdown-item" type="button">July</button>
+                <button id="august" class="dropdown-item" type="button">August</button>
+                <button id="september" class="dropdown-item" type="button">September</button>
+                <button id="october" class="dropdown-item" type="button">October</button>
+                <button id="november" class="dropdown-item" type="button">November</button>
+                <button id="december" class="dropdown-item" type="button">December</button>
+                <!-- <div class="dropdown-divider"></div>
+                <button id="year" class="dropdown-item" type="button"> Year 2019</button> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4" id="jumbotron1">Fluid jumbotron</h1>
+                <p class="lead" id = "jumbotron1Undertext">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p>About Age Group's accidents</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="radarChart" width="100" height="60"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="lineGroupage" width="100" height="60"></canvas>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p >About Daily Accidents in L.A. City</p>
+            </div>
+        </div>
+        <div  class="row">
+            <div class="col-md-4">
+                <canvas id="oneDayWeather" width="200" height="200"></canvas>
+            </div>
+            <div class="col-md-4">
+                <canvas id="lineChart" width="200" height="200"></canvas>
+            </div>
+            <div class="col-md-4">
+                <canvas id="barChart" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p >Car Collisions' Distribution through L.A. City</p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="mapBoxChart" class="col-xs-12 boxMap" width="100" height="800"></div>
+        </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- API key -->
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="../static/js/functions.js"></script>
+    <script type="text/javascript" src="../static/js/mapbox.js"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/main1.js"></script>
+    
+    
+    <!-- Leaflet heatmap plugin-->
+    <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+.box-set{
+    position : relative;
+    height: 400px;
+    
+}
+
+.box {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    /* border : 1px solid gray; */
+}
+
+
+.box-1 {
+    left : 0%;
+}
+
+.box-2{
+    left : 0%;
+}
+
+.box-3 {
+    left : 0%
+}
+
+.box-5 {
+    left : 55px;
+    top : 125px;
+}
+
+
+/* CUSTOMIZIN THE MAP BO X*/
+
+.boxMap {
+    position: relative;
+    height: 400px;
+    width: 100px;
+    border : 1px solid black;
+}
+
+.box-4 {
+    top : 100px;
+    left : 45px;
+}
+
+
+.navbar-brand
+{
+  font-family: 'Lato', sans-serif;
+  color:grey;
+  font-size: 100px;
+  margin: 0px;
+}

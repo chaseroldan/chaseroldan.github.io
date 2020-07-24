@@ -1,0 +1,32 @@
+h1 { 
+    font-size: 60px;
+    font-weight: bold;
+    background-color: gold;
+}
+
+h1:hover { 
+    color: blue;
+}
+
+h3:hover { 
+    color: gold;
+}
+
+h4:hover {
+    color: gold;
+}
+
+.container {
+    background: black;
+}
+
+.col-md-12 {   
+    background: green;
+    padding: 20px;
+    position: relative;
+}
+
+.js-plotly-plot {
+    margin-bottom: 20px;
+    position: relative;
+}

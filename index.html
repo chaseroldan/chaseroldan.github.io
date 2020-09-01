@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Summer Olympic Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <style>
+    
+    * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #map,
+    .content {
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    /* background: url(Images/imageedit_2_9087236380.png); */
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .jumbotron.text-center {
+    background-color: black;
+    padding-top: 40px;
+    border-radius: 0px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .jumbotron {
+        background-color: black;
+        padding-top: 30px;
+        border-radius: 25px;
+        height: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .jumbotron.text-center.footer {
+    background-color: black;
+    padding-top: 15px;
+    border-radius: 0px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    }
+
+    .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .content {
+    background-color: black;
+    padding: 10px;
+    height: 720px; 
+    }
+
+    .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    }
+
+    .grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header header header header header' 
+        'left left middle middle right right' 
+        'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+
+    .left,
+    .middle,
+    .right {
+    padding: 10px;
+    height: 500px;   
+    }
+
+    
+    .middle {
+    grid-area: middle;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .button {
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+
+    /* Responsive layout - makes the three columns stack on top of each other */
+    @media (max-width: 800px) {
+    .grid-container  {
+        grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+
+    .jumbotron.text-center {
+    background-color: black;
+    padding-top: 40px;
+    border-radius: 0px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+
+    }
+</style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1 style="color:white; font-size:300%; font-family: Arial Black;">Summer Olympics Analysis</h1>
+  <p style="color:white;">120 years of Olympic History! 1896-2016</p>
+  <!-- <img src="all-medals.png" alt="Summer Olympics" width="100" height="60">  -->
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index2.html"><img src="images/olympic-rings.png" alt="Summer Olympics" width="75" height="50"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="gold.html"><img src="images/medal-gold.png" alt="Summer Olympics" width="50" height="40"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="silver.html"><img src="images/medal-silver.png" alt="Summer Olympics" width="50" height="40"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bronze.html"><img src="images/medal-bronze.png" alt="Summer Olympics" width="50" height="40"></a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="usa.html"><img src="images/usa.png" alt="Summer Olympics" width="60" height="40"></a>
+      </li>  
+    </ul>
+  </div>  
+</nav>
+
+
+<div class="content">
+    <div id="map" style="width: 1800px; height: 700px"></div>
+</div>
+
+<h4 style="text-align: center;">The markers featured in the interactive map above and the bars in the interactive chart below display the number of each type of Summer Olympic medals won per top 10 team.</h4>
+
+
+<div class="grid-container">
+    
+    
+    <div class="middle" style="background-color:#bbb;">
+
+        <div class="jumbotron" style="margin-bottom:0">
+            <!-- Add 2 buttons -->
+            <button onclick="update(data1)">USA</button>
+            <button onclick="update(data2)">Soviet Union</button>
+            <button onclick="update(data3)">Germany</button>
+            <button onclick="update(data4)">Australia</button>
+            <button onclick="update(data5)">Great Britain</button>
+            <button onclick="update(data6)">Russia</button>
+            <button onclick="update(data7)">Italy</button>
+            <button onclick="update(data8)">France</button>
+            <button onclick="update(data9)">East Germany</button>
+            <button onclick="update(data10)">China</button>
+        </div>
+        
+    
+
+    <!-- Graph -->
+        <div id="my_dataviz"></div>
+
+    </div>  
+  
+  
+</div>
+
+<div class="grid-container">
+    
+    <div class="middle" style="background-color:#bbb;">
+        <img src="images/Most_Team_Medals.png" alt="Summer Olympics" width="877" height="480">
+
+    </div>  
+  
+</div>
+
+
+</body>
+</html>
+
+
+<div class="jumbotron text-center footer" style="margin-bottom:0">
+    <img src="images/olympic-rings.png" alt="Summer Olympics" width="100" height="70">
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+crossorigin=""></script>
+<!-- API key -->
+<script type="text/javascript" src="config.js"></script>
+<!-- JS -->
+<script type="text/javascript" src="logic2.js"></script>
+
+<script type="text/javascript" src="chart.js"></script>
+
+</body>
+</html>

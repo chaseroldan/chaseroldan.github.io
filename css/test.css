@@ -1,0 +1,12 @@
+.carousel-inner {
+    width: 80%;
+    margin: auto;
+    -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: saturate(90%); /* FF 35+ */
+  }
+  
+  .carousel-inner:hover {
+    -webkit-filter: saturate(300%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: saturate(300%); /* FF 35+ */
+    cursor: pointer;
+  }

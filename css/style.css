@@ -260,7 +260,7 @@ h2 {
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -180px;
 }
 
 /* Popup arrow */
@@ -312,4 +312,6 @@ h2 {
     -webkit-filter: saturate(200%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: saturate(200%); /* FF 35+ */
   }
+
+  
 }

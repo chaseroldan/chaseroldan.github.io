@@ -73,6 +73,15 @@
           
         </p> -->
         
+
+        <div class="popup" onclick="myFunction()">
+          <a class="btn btn-info" >Bio</a>
+          <span class="popuptext" id="myPopup">
+            <p>I was born and raised in California's Central Valley. I grew up playing sports and became an NCAA decathlete at Chico State. I have many hobbies including traveling, hiking, guitar, and photography. I enjoy learning new things and giving back to the world.</p>
+          </span>
+        </div>
+
+
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -282,6 +291,14 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
 
 </body>
 

@@ -250,7 +250,7 @@ h2 {
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 450px;
+  width: 400px;
   background-color: #343a40;
   color: white;
   text-align: center;

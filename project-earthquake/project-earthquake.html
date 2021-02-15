@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Chase Roldan</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <!-- Our CSS -->
+  
+</head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Chase Roldan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/data.html">Data Analysis</a>
+                <!-- <a class="dropdown-item" href="web.html">Web Development</a>
+                <a class="dropdown-item" href="photo.html">Photography</a> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container">
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="profile-pic" src="/images/earthquake.png" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5 text-center">
+        <h1 class="font-weight-light">Global Earthquake Analysis</h1>
+    
+
+        <!-- <p>Check out my data visualization skills!</p> -->
+        <br><a class="btn btn-success" href="#">Github</a>
+      </div>
+      
+      <!-- /.col-md-4 -->
+    </div>
+    
+    <div class="card text-white bg-dark my-5 py-1 text-center">
+      <div class="card-body">
+        
+        <h5>This project is designed to display weekly data about earthquakes and fault lines across the globe. The map features multiple map styles and each earthquake is organized by magnitude, date, and location.</h5>
+        <img class="skills-img2" src="/images/bootstrap.png" alt="excel-img">
+        <img class="skills-img2" src="/images/javascript.png" alt="python-img">
+        <img class="skills-img2" src="/images/leaflet.png" alt="jupyter-img">
+      </div>
+    </div>
+  </div>
+    <div id="map"></div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- API Key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!--JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+  
+    <footer class="py-3 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Chase Roldan</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  </body>
+  </html>

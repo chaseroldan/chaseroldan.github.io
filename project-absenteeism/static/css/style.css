@@ -101,7 +101,7 @@ img.center {
 
 .profile-pic {
   height: 230px;
-  padding-bottom: 10px;
+  max-width: 330px;
   -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(0%); /* FF 35+ */
   transition: 1s ease;
@@ -122,9 +122,9 @@ img.center {
 
 .skills-img2 {
   max-width: 10%;
-  max-height: 60px;
+  max-height: 55px;
   margin-top: 10px;
-  padding: 0px 5px 5px;
+  padding: 0px 5px 0px;
   transition: filter .1s ease-in-out;
   -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: saturate(90%); /* FF 35+ */
@@ -136,10 +136,63 @@ img.center {
   cursor: pointer;
 }
 
+.tableauPlaceholder {
+  margin: auto;
+  padding: 5px;
+  
+  /* width: 80%; */
+}
+
+.row {
+  margin: auto;
+  width: 90%;
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 8px 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.col-lg-7 {
+  margin: auto;
+}
+
+
+@media (max-width: 1600px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+  .row1 {
+    overflow: scroll;
+  }
+
+
+
+  .tableauPlaceholder {
+    display: flex;
+    margin: auto;
+    padding: 5px;
+   
+    
+    
+    /* width: 80%; */
+  }
+ 
+}
+
 @media (max-width: 1000px) {
   /* CSS that should be displayed if width is equal to or less than 800px goes here */
 
-  
+  .row1 {
+    overflow: scroll;
+  }
+
+  .tableauPlaceholder {
+    display: flex;
+    margin: auto;
+    padding: 5px;
+   
+    /* width: 80%; */
+  }
+
   .dropdown-menu {
     width: 30px;
     text-align: center;

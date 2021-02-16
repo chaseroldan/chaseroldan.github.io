@@ -70,7 +70,7 @@ body {
 .skills-img2 {
   max-width: 10%;
   max-height: 60px;
-  margin-top: 2px;
+  margin-top: 15px;
   padding: 0px 5px 5px;
   transition: filter .1s ease-in-out;
   -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
@@ -318,4 +318,8 @@ h2 {
     filter: saturate(200%); /* FF 35+ */
   }
   
+  .dropdown-menu {
+    width: 30px;
+    text-align: center;
+  }
 }

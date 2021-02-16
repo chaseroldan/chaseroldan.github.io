@@ -138,6 +138,7 @@ img.center {
 .tableauPlaceholder {
   margin: auto;
   padding: 5px;
+  
   /* width: 80%; */
 }
 
@@ -148,4 +149,52 @@ img.center {
 
 .card:hover {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.16), 8px 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.col-lg-7 {
+  margin: auto;
+}
+
+
+@media (max-width: 1600px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+  .row1 {
+    overflow: scroll;
+  }
+
+
+
+  .tableauPlaceholder {
+    display: flex;
+    margin: auto;
+    padding: 5px;
+   
+    
+    
+    /* width: 80%; */
+  }
+ 
+}
+
+@media (max-width: 1000px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+  .row1 {
+    overflow: scroll;
+  }
+
+  .tableauPlaceholder {
+    display: flex;
+    margin: auto;
+    padding: 5px;
+   
+    /* width: 80%; */
+  }
+
+  .dropdown-menu {
+    width: 30px;
+    text-align: center;
+  }
+ 
 }

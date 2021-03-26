@@ -77,8 +77,8 @@ body {
 .skills-img2 {
   max-width: 20%;
   max-height: 45px;
-  margin-top: 0px;
-  padding: 5px 5px 0px;
+  margin-top: 10px;
+  padding: 0px 5px 0px;
   transition: filter .1s ease-in-out;
   -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: saturate(90%); /* FF 35+ */

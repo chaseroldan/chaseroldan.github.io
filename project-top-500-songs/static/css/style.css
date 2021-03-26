@@ -104,7 +104,7 @@ img.center {
   max-width: 330px;
   -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(0%); /* FF 35+ */
-  transition: 1s ease;
+  /* transition: 1s ease; */
 }
 
 .profile-pic:hover {
@@ -138,7 +138,9 @@ img.center {
 
 .tableauPlaceholder {
   margin: auto;
-  padding: 5px;
+  width: 1200px;
+  height: 900px;
+  
   
   /* width: 80%; */
 }
@@ -157,38 +159,35 @@ img.center {
 }
 
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   /* CSS that should be displayed if width is equal to or less than 800px goes here */
 
-  .row1 {
-    overflow: scroll;
-  }
-
-
-
   .tableauPlaceholder {
-    display: flex;
+    
     margin: auto;
-    padding: 5px;
+    
+    height: 900px;
+    width: 700px;
    
-    
-    
     /* width: 80%; */
   }
+
+  .profile-pic {
+    padding-bottom: 15px;
+  }
+
  
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   /* CSS that should be displayed if width is equal to or less than 800px goes here */
 
-  .row1 {
-    overflow: scroll;
-  }
-
   .tableauPlaceholder {
-    display: flex;
+    
     margin: auto;
-    padding: 5px;
+    
+    height: 900px;
+    width: 700px;
    
     /* width: 80%; */
   }

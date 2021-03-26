@@ -103,7 +103,7 @@ img.center {
   height: 230px;
   -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(0%); /* FF 35+ */
-  transition: 1s ease;
+  /* transition: 1s ease; */
 }
 
 .profile-pic:hover {
@@ -177,6 +177,11 @@ img.center {
     
     /* width: 80%; */
   }
+
+  .profile-pic {
+    padding-bottom: 15px;
+  }
+
  
 }
 

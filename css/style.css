@@ -324,6 +324,10 @@ h2 {
     -webkit-filter: saturate(200%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: saturate(200%); /* FF 35+ */
   }
+
+  .skills-img2 {
+    margin-top: 10px;
+  }
   
   .dropdown-menu {
     width: 30px;

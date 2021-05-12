@@ -114,8 +114,10 @@ body {
   -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: grayscale(100%); /* FF 35+ */
   cursor: pointer;
-  transform: rotate(360deg);
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
 
 }
 
@@ -144,7 +146,7 @@ body {
   height: 120px;
   margin: auto;
   padding: 0px;
-  padding-top: 20px;
+  padding-top: 25px;
   transition: filter .1s ease-in-out;
   -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
   filter: saturate(90%); /* FF 35+ */
@@ -156,14 +158,57 @@ body {
   height: 120px;
   margin: auto;
   padding: 0px;
-  padding-top: 20px;
-  -webkit-filter: saturate(500%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
-  filter: saturate(500%); /* FF 35+ */
+  padding-top: 25px;
+  -webkit-filter: saturate(400%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(400%); /* FF 35+ */
   cursor: pointer;
-  transform: rotate(360deg);
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
 
 }
+
+.cert-img-top {
+  width: 110px;
+  height: 120px;
+  margin: auto;
+  padding: 0px;
+  padding-top: 0px;
+  transition: filter .1s ease-in-out;
+  -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(90%); /* FF 35+ */
+
+}
+
+.cert-img-top:hover {
+  width: 110px;
+  height: 120px;
+  margin: auto;
+  padding: 0px;
+  padding-top: 3px;
+  -webkit-filter: saturate(400%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(400%); /* FF 35+ */
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+  transition: 1s ease;
+
+}
+
+.cert-img-full {
+  width: 500px;
+  height: 450px;
+  margin: auto;
+  padding: 0px;
+  padding-top: 0px;
+  transition: filter .1s ease-in-out;
+  -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(90%); /* FF 35+ */
+
+}
+
 
 
 .carousel-item {
@@ -212,6 +257,9 @@ h2 {
   color: black;
 }
 
+h4 {
+  color: black;
+}
 
 
 
@@ -219,6 +267,10 @@ h2 {
   height: 120%;
 
 }
+
+
+
+
 
 .contact-img-top {
   width: 50px;
@@ -246,6 +298,34 @@ h2 {
 
 }
 
+
+.work-img-top {
+  width: 50px;
+  height: 55px;
+  margin: auto;
+  padding: 5px;
+  padding-top: 5px;
+  transition: filter .1s ease-in-out;
+  -webkit-filter: saturate(90%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(90%); /* FF 35+ */
+
+}
+
+.work-img-top:hover {
+  width: 50px;
+  height: 55px;
+  margin: auto;
+  padding: 5px;
+  padding-top: 5px;
+  -webkit-filter: saturate(500%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: saturate(500%); /* FF 35+ */
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+
+}
 
 
 /* Popup container - can be anything you want */
@@ -294,6 +374,9 @@ h2 {
   animation: fadeIn 1s;
 }
 
+
+
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;} 
@@ -332,5 +415,10 @@ h2 {
   .dropdown-menu {
     width: 30px;
     text-align: center;
+  }
+
+  .card-footer.h7 {
+    font-size: 7px;
+
   }
 }

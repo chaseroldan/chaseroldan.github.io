@@ -16,6 +16,64 @@
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .collapsible {
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      padding: 0px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      /* font-size: 15px; */
+    }
+
+    
+    .active, .collapsible:hover {
+      background-color: transparent;
+    }
+    
+    .content {
+      padding: 0px 1px;
+    
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #fff;
+    }
+
+
+    .collapsible2 {
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      padding: 0px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      /* font-size: 15px; */
+    }
+
+    .active2, .collapsible2:hover {
+      background-color: transparent;
+    }
+    
+    .content2 {
+      padding: 0px 0px;
+    
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #fff;
+    }
+    </style>
+  
+
 </head>
 
 <body>
@@ -86,46 +144,47 @@
       <!-- /.col-md-4 -->
     </div>
 
-
+    
     <!-- Content Row -->
-    <div class="row">
+    <div class="row" style="max-width: 70%; margin: auto;">
+      
       <div class="col-md-3 mb-5 text-center">
         <div class="card h-100 text-white bg-light">
-          <img class="contact-img-top" src="images/phone.png" alt="Card image cap">
+          <img class="contact-img-top" src="images/phone.png" alt="Card image cap" data-toggle="tooltip" data-placement="bottom" title="559-909-1686">
           
-          <div class="card-footer bg-dark">
-            <h7>559-909-1686</h7>
-          </div>
+          <!-- <div class="card-footer bg-dark" style="font-size: 9px;">
+            <h7>Phone</h7>
+          </div> -->
         </div>
       </div>
       <!-- /.col-md-4 -->
       <div class="col-md-3 mb-5 text-center">
         <div class="card h-100 text-white bg-light">
-          <img class="contact-img-top" src="images/gmail.png" alt="Card image cap">
+          <img class="contact-img-top" src="images/gmail.png" alt="Card image cap" data-toggle="tooltip" data-placement="bottom" title="chaseroldan1@gmail.com">
           
-          <div class="card-footer bg-dark">
-            <h7>chaseroldan1@gmail.com</h7>
-          </div>
+          <!-- <div class="card-footer bg-dark" style="font-size: 9px;">
+            <h7>Email</h7>
+          </div> -->
         </div>
       </div>
       
       <div class="col-md-3 mb-5 text-center">
         <div class="card h-100 text-white bg-light">
-          <img class="contact-img-top" src="images/linkedin.png" alt="Card image cap">
+          <img class="contact-img-top" src="images/linkedin.png" alt="Card image cap" data-toggle="tooltip" data-placement="bottom" title="linkedin.com/in/chaseroldan/">
           
-          <div class="card-footer bg-dark">
-            <h7>linkedin.com/in/chaseroldan/</h7>
-          </div>
+          <!-- <div class="card-footer bg-dark" style="font-size: 9px;">
+            <h7>LinkedIn</h7>
+          </div> -->
         </div>
       </div>
 
       <div class="col-md-3 mb-5 text-center">
         <div class="card h-100 text-white bg-light">
-          <img class="contact-img-top" src="images/github.png" alt="Card image cap">
+          <img class="contact-img-top" src="images/github.png" alt="Card image cap" data-toggle="tooltip" data-placement="bottom" title="github.com/chaseroldan">
           
-          <div class="card-footer bg-dark">
-            <h7>github.com/chaseroldan</h7>
-          </div>
+          <!-- <div class="card-footer bg-dark" style="font-size: 9px;">
+            <h7>Github</h7>
+          </div> -->
         </div>
       </div>
 
@@ -134,21 +193,83 @@
 
     <div class="card text-white bg-dark mb-5 p-1 text-center">
       <div class="card-body">
-        <h1>Education</h1>
+        <h1 class="collapsible2">Education</h1>
+        <div class="content2" style="width: 40%; margin: auto;">
+          <!-- <marquee behavior="scroll" direction="left" style="background-color: #fff; ">
+            <img class="cert-img-top" src="images/uci-python.png" alt="python-img">
+            <img class="cert-img-top" src="images/uci-stats.png" alt="jupyter-img">
+            <img class="cert-img-top" src="images/uci-web.png" alt="SQL-img">
+            <img class="cert-img-top" src="images/uci-etl.png" alt="tableau-img">
+            <img class="cert-img-top" src="images/uci-excel.png" alt="mysql-img">
+            
+            
+          
+          </marquee> -->
+          <div class="row-carousel">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="cert-img-top" src="images/uci-python.png" alt="python-img">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/uci-stats.png" class="cert-img-top" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/uci-web.png" class="cert-img-top" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/uci-etl.png" class="cert-img-top" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/uci-excel.png" class="cert-img-top" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/sololearn-python.jpg" class="cert-img-top" alt="..." data-toggle="modal" data-target=".bd-example-modal-lg">
+                  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <img src="images/sololearn-python.jpg" class="cert-img-full" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="images/sololearn-js.jpg" class="cert-img-top" alt="..." data-toggle="modal" data-target=".bd-example-modal-lg2">
+                  <div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <img src="images/sololearn-js.jpg" class="cert-img-full" alt="...">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+          
       </div>
     </div>
 
 
     <!-- Content Row -->
-    <div class="row">
+    <div class="row" style="max-width: 70%; margin: auto;">
       <div class="col-md-6 mb-5 text-center">
         <div class="card h-100 text-white bg-light">
           <img class="edu-img-top" src="images/uci.png" alt="Card image cap">
           <div class="card-body">
-            <h2>UC Irvine</h2>
+            <h4>UC Irvine</h4>
           </div>
           <div class="card-footer bg-dark">
-            <h4 style="padding-top: 3px;">Data Analytics Certificate | 2020</h4>
+            <h7 style="padding-top: 3px;">Data Analytics Certificate | 2020</h7>
           </div>
         </div>
       </div>
@@ -157,10 +278,10 @@
         <div class="card h-100 text-white bg-light">
           <img class="edu-img-top" src="images/chico.png" alt="Card image cap">
           <div class="card-body">
-            <h2>Chico State</h2>
+            <h4>Chico State</h4>
           </div>
           <div class="card-footer bg-dark">
-            <h4 style="padding-top: 3px;">MBA & BA Psychology | 2016</h4>
+            <h7 style="padding-top: 3px;">MBA & BA Psychology | 2016</h7>
           </div>
         </div>
       </div>
@@ -169,18 +290,64 @@
     </div>
     <!-- /.row -->
 
-    <div class="card text-white bg-dark my-2 pt-1 text-center">
+   
+
+    <div class="card text-white bg-dark mb-5 p-1 text-center">
       <div class="card-body">
-        <h1>Work Experience</h1>
+        <h1 class="collapsible">Work Experience</h1>
+        <div class="content">
+          <div class="row" style="max-width: 90%; margin: auto; padding-top: 40px;">
+      
+            <div class="col-md-3 mb-5 text-center">
+              <div class="card h-100 text-white bg-light">
+                <img class="work-img-top" src="images/burlington.png" alt="Card image cap">
+                
+                <div class="card-footer bg-dark" style="font-size: 9px;">
+                  <h7>Sales Associate</h7>
+                </div>
+              </div>
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-3 mb-5 text-center">
+              <div class="card h-100 text-white bg-light">
+                <img class="work-img-top" src="images/wholefoods.png" alt="Card image cap">
+                
+                <div class="card-footer bg-dark" style="font-size: 9px;">
+                  <h7>Team Member</h7>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-3 mb-5 text-center">
+              <div class="card h-100 text-white bg-light">
+                <img class="work-img-top" src="images/lafitness.png" alt="Card image cap">
+                
+                <div class="card-footer bg-dark" style="font-size: 9px;">
+                  <h7>Personal Trainer</h7>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-3 mb-5 text-center">
+              <div class="card h-100 text-white bg-light">
+                <img class="work-img-top" src="images/jobspring.png" alt="Card image cap">
+                
+                <div class="card-footer bg-dark" style="font-size: 9px;">
+                  <h7>Recruiter</h7>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
       </div>
     </div>
 
 
-
-
+    
 
     <!-- Content Row -->
-    <div class="row">
+    <!-- <div class="row" style="max-width: 70%; margin: auto;">
       <div class="row-carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -188,10 +355,10 @@
               <div class="card h-100 text-white bg-light">
                 <img class="edu-img-top" src="images/burlington.png" alt="Card image cap">
                 <div class="card-body">
-                  <h2>Burlington Stores</h2>
+                  <h4>Burlington Stores</h4>
                 </div>
                 <div class="card-footer bg-dark">
-                  <h4>Sales Associate | 2020-2021</h4>
+                  <h7>Sales Associate | 2020-2021</h7>
                 </div>
               </div>
             </div>
@@ -200,10 +367,10 @@
               <div class="card h-100 text-white bg-light">
                 <img class="edu-img-top" src="images/wholefoods.png" alt="Card image cap">
                 <div class="card-body">
-                  <h2>Whole Foods Market</h2>
+                  <h4>Whole Foods Market</h4>
                 </div>
                 <div class="card-footer bg-dark">
-                  <h4>Team Member | 2018-2019</h4>
+                  <h7>Team Member | 2018-2019</h7>
                 </div>
               </div>
             </div>
@@ -212,10 +379,10 @@
               <div class="card h-100 text-white bg-light">
                 <img class="edu-img-top" src="images/lafitness.png" alt="Card image cap">
                 <div class="card-body">
-                  <h2>LA Fitness</h2>
+                  <h4>LA Fitness</h4>
                 </div>
                 <div class="card-footer bg-dark">
-                  <h4>Personal Training Counselor | 2018</h4>
+                  <h7>Personal Trainer | 2018</h7>
                 </div>
               </div>
             </div>
@@ -224,25 +391,13 @@
               <div class="card h-100 text-white bg-light">
                 <img class="edu-img-top" src="images/jobspring.png" alt="Card image cap">
                 <div class="card-body">
-                  <h2>Jobspring Partners</h2>
+                  <h4>Jobspring Partners</h4>
                 </div>
                 <div class="card-footer bg-dark">
-                  <h4>Technical Recruiter | 2018</h4>
+                  <h7>Technical Recruiter | 2018</h7>
                 </div>
               </div>
             </div>
-
-            <!-- <div class="carousel-item">
-              <div class="card h-100 text-white bg-light">
-                <img class="edu-img-top" src="images/sharkeez.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h2>Baja Sharkeez</h2>
-                </div>
-                <div class="card-footer bg-dark">
-                  <h4>Team Member | 2017</h4>
-                </div>
-              </div>
-            </div> -->
 
           </div>
 
@@ -257,7 +412,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
     <!-- /.row -->
 
     
@@ -311,6 +466,50 @@
       popup.classList.toggle("show");
     }
   </script>
+
+  <!-- Collapsible -->
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+   <!-- Collapsible2 -->
+   <script>
+    var coll2 = document.getElementsByClassName("collapsible2");
+    var i;
+    
+    for (i = 0; i < coll2.length; i++) {
+      coll2[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>  
+
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+  </script>
+
+
+
 
 </body>
 

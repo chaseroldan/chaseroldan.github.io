@@ -40,6 +40,27 @@
     width: 200px;
   }
 
+  .card-img-top {
+    width: 80%;
+    min-height: 100px;
+    margin: auto;
+  }
+
+  .card {
+    box-shadow: 2px 2px 2px black;
+  }
+
+  /* .carousel-item {
+    width: 100%;
+    
+    
+  }
+
+  .cimage{
+    text-align: center;
+    width: 20%;
+  } */
+
   #links {
     width: 20px;
   }
@@ -57,7 +78,7 @@
   .col-sm-12 {
     text-align: center;
     width: 300px;
-    background-color: silver; border-radius: 10px; box-shadow: 2px 2px 2px black; margin: auto;
+    background-color: white; border-radius: 10px; box-shadow: 2px 2px 2px black; margin: auto;
     
   }
 
@@ -114,45 +135,39 @@
     
     <h1>Chase Roldan</h1>
     <img src="images/profile-pic1.png" alt="">
-    <p>Data Analyst | Web Designer</p> 
-
-    <br>
-
-    <div class="row">
-      <div class="col-sm-12">
-          <div class="btn-group" style="padding: 10px;">
-            <button type="button" class="btn btn-light"><img id="links" src="images/github.png" alt=""></button>
-            <button type="button" class="btn btn-light"><img id="links" src="images/linked in.png" alt=""></button>
-            <button type="button" class="btn btn-light"><img id="links" src="images/indeed.png" alt=""></button>
-            
-          </div>
-      </div>
-
-   
-        
+    <h4>Data Analyst</h4> 
+    <p>MBA with expertise in Python, SQL, JavaScript, Tableau, and more!</p> 
+    <div class="btn-group" style="padding: 10px;">
+      <button type="button" class="btn btn-light"><img id="links" src="images/github.png" alt=""></button>
+      <button type="button" class="btn btn-light"><img id="links" src="images/linked in.png" alt=""></button>
+      <!-- <button type="button" class="btn btn-light"><img id="links" src="images/indeed.png" alt=""></button> -->
+      
     </div>
+  
 
-    <button style="width: 80px; margin-top: 40px;" class="btn btn-light" data-toggle="collapse" data-target="#demo">About</button>
+    <!-- <button style="width: 80px; margin-top: 20px;" class="btn btn-light" data-toggle="collapse" data-target="#demo">About</button>
 
         <div id="demo" class="collapse" style="padding: 15px;">
-            <div class="row">
-              <div>
-                  <div class="btn-group" style="padding: 0px;">
-                    <button type="button" class="btn btn-light"><img id="skills" src="images/python-logo.png" alt=""></button>
-                    <button type="button" class="btn btn-light"><img id="skills" src="images/SQL.png" alt=""></button>
-                    <button type="button" class="btn btn-light"><img id="skills" src="images/javascript.png" alt=""></button>
-                    <button type="button" class="btn btn-light"><img id="skills" src="images/excel.png" alt=""></button>
-                    <button type="button" class="btn btn-light"><img id="skills" src="images/tableau.png" alt=""></button>
-                  
-                  </div>
-              </div>
+          <div class="col-sm-12">
+            <div class="btn-group" style="padding: 10px;">
+              <button type="button" class="btn btn-light"><img id="links" src="images/github.png" alt=""></button>
+              <button type="button" class="btn btn-light"><img id="links" src="images/linked in.png" alt=""></button>
+              <button type="button" class="btn btn-light"><img id="links" src="images/indeed.png" alt=""></button>
+              
             </div>
 
-          <br>
-          - CSU Chico: BA Psychology & MBA
-          <br>
-          <br>
-          - UC Irvine: Data Analytics Certificate
+          <div style="padding: 10px; color: black; font-weight: bold;">
+              - CSU Chico: BA Psychology & MBA
+            <br>
+            
+            - UC Irvine: Data Analytics Certificate
+          </div>
+
+            
+
+
+        </div> -->
+
         </div>
     
 
@@ -161,64 +176,66 @@
   <div class="container mt-5" style="text-align: center;">
 
     
-
-      <br>
-
       <div class="row">
         <div class="col-sm-12">
-          <h3>Data Analytics</h3>
+          <h3>Data Projects</h3>
 
-      
-          <div class="dropdown">
-            <button style="margin: 10px;" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Business
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="cokepepsi.html">Coke vs Pepsi</a></li>
-              <li><a href="microapple.html">Apple vs Microsoft</a></li>
-            </ul>
-          </div>
-
-          
-
-          <div class="dropdown">
-            <button style="margin: 10px;" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Sports
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="ncaabasketball.html">NCAA Basketball Analysis</a></li>
-              <li><a href="ncaabasketballcomparison.html">NCAA Basketball Table</a></li>
-              
-            </ul>
-          </div>
-
-
-          
         </div>
       </div>
 
-      
+      <div class="container mt-5" style="text-align: center;">
 
-      
-
-      <!-- <div class="row">
-        <div class="col-sm-12">
-          <h3>Web Design</h3>
-            <div class="btn-group-vertical" style="padding: 10px;">
-              <button type="button" class="btn btn-dark">Project 1</button>
-              <button type="button" class="btn btn-dark">Project 2</button>
-              
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="images/cokepepsi.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <a href="cokevspepsi.html"><h5 class="card-title">Coca-Cola vs PepsiCo</h5></a>
+                    <p class="card-text">Coca-Cola has a more efficient profit margin than PepsiCo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="images/applemicrosoft.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <a href="applevsmicro.html"><h5 class="card-title">Apple vs Microsoft</h5></a>
+                    <p class="card-text">Apple generates more revenue and net income than Microsoft</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="images/ncaa.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <a href="ncaabasketball2023.html"><h5 class="card-title">Men's Basketball 2023</h5></a>
+                    <p class="card-text">Winning percentage is correlated with points scored per points allowed</p>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col">
+                <div class="card">
+                  <img src="images/javascript.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div> -->
             </div>
-        </div>
-      </div> -->
+            </div>
+  
+            
+  
+        
+          </div>
 
-      
-
-      <div class="row" style="text-align: center; margin-top: 100px;">
+    <div class="row" style="text-align: center; margin-top: 100px;">
         <p>Chase Roldan</p>
-      </div>
+    </div>
 
       
 

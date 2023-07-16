@@ -134,23 +134,38 @@
 
   button {
     background-color: silver;
-    padding: 10px;
+    padding: 5px;
+    
     border-radius: 10px;
     border: none;
     font-weight: bold;
+    color: black;
     box-shadow: 2px 2px 2px black;
   }
 
   button:hover {
-    background-color: silver;
-    padding: 10px;
+    background-color: black;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     font-weight: bold;
+    color: white;
     box-shadow: none;
   }
 
-  @media only screen and (max-width: 600px) {
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+  @media only screen and (max-width: 800px) {
   #skills {
     width: 20px;
   }
@@ -182,28 +197,36 @@
           <h2>Choose Your Effects:</h2>
           <br>
           <br>
-          <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="row row-cols-1 row-cols-md-12 g-4">
             
-            <div class="col">
+            <ul>
+              <li>
+                <div class="col">
              
-                  <button onclick="changeAllImage()">Energy</button>
-               
-            </div>
-            <div class="col">
+                <button onclick="changeAllImage()">Energy</button>
+             
+                </div>
+              </li>
+              <li><div class="col">
               
-                  <button onclick="changeAllImageRelief()">Relief</button>
-               
-            </div>
-            <div class="col">
+                <button onclick="changeAllImageRelief()">Relief</button>
              
-                  <button onclick="changeAllImageEuphoria()">Euphoria</button>
-                
-            </div>
-            <div class="col">
-              <div class="card-body">
-                  <a class="navbar-brand" href=""><button onclick="changeAllImageBack()">Reset</button></a>
-                
-            </div>
+          </div></li>
+              <li><div class="col">
+             
+                <button onclick="changeAllImageEuphoria()">Euphoria</button>
+              
+          </div></li>
+              <li><div class="col">
+                <div class="card-body">
+                    <a class="navbar-brand" href=""><button onclick="changeAllImageBack()">Reset</button></a>
+                  
+              </div></li>
+            </ul>
+            
+            
+            
+            
 
             
             

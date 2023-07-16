@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript change image onclick event
+</title>
+<style type="text/css">
+	h2 {
+    text-align: center;
+    font-size: 30px;
+	}
+	img#getImage {
+    width: 300px;
+    height: auto;  
+    border: 4px solid #a1a1a1;  
+	}
+	div {
+    text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div>
+        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
+        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
+        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
+        <button onclick="changeAllImage()">Change Image</button>
+    </div>
+    <script>
+        function changeAllImage() {
+           const image = document.querySelectorAll(".myImg");
+           image.forEach(element => {
+              element.src = 'images/checkmark.png'
+          }); 
+        }
+     </script>
+
+</body>
+</html>

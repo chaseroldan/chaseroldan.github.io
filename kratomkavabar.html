@@ -57,16 +57,24 @@
   }
 
   .card {
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px silver;
+    background-color: black;
+    color: black;
   }
 
   .card:hover {
-    box-shadow: 2px 2px 2px silver;
+    box-shadow: 2px 2px 2px black;
+  }
+
+  .card-title2 {
+    font-size: 20px;
+    font-weight: bold;
   }
 
 
   #links {
     width: 20px;
+    
   }
 
   #skills {
@@ -108,7 +116,7 @@
 
 
   #white {
-    background-color: silver;
+    background-color: white;
   }
 
   
@@ -136,7 +144,7 @@
   button {
     background-color: silver;
     padding: 5px;
-    
+    margin-bottom: 5px;
     border-radius: 10px;
     border: none;
     font-weight: bold;
@@ -168,7 +176,13 @@ li {
 
 .collapse {
   color: black;
+  
+  
 }
+
+
+
+
 
   @media only screen and (max-width: 800px) {
   #skills {
@@ -183,14 +197,22 @@ li {
   h1 {
     font-size: 40px;
   }
+
+  #buttonrow {
+    margin-left: 18px;
+  }
 }
 
 </style>
 </head>
 <body>
+
+  
   
   <div class="container-fluid p-5 bg-dark text-white text-center">
-    
+    <div>
+      <a style="position: right; margin-right: -99%;" class="navbar-brand" href=""><button style="width: min-content;" onclick="changeAllImageBack()">Reset</button></a>
+    </div>
     <h1>Kratom Strains</h1> 
 
    
@@ -199,6 +221,8 @@ li {
     <div class="container mt-3" style="text-align: center;">
       <div class="row">
         <div class="col-md-12">
+
+         
           
           
           
@@ -210,22 +234,24 @@ li {
             <li>
               <p style="color: white;">Energetic</p>
             </li>
-            <li><p style="color: green;">Balanced</p></li>
+            <li><p style="color: lightgreen;">Balanced</p></li>
             
             <li><p style="color: lightcoral;">Relaxed</p></li>
           </ul>
+
+          
 
           <br>
           <h2>Choose Your Effects:</h2>
           <br>
           
-          <div class="row row-cols-1 row-cols-md-12 g-4">
+          <div id="buttonrow" class="row row-cols-1 row-cols-md-12 g-4">
             
             <ul>
               <li>
                 <div class="col">
              
-                <button style="box-shadow: 2px 2px 2px green;" onclick="changeAllImage()">Energy</button>
+                <button style="box-shadow: 2px 2px 2px white;" onclick="changeAllImage()">Energy</button>
              
                 </div>
               </li>
@@ -234,16 +260,17 @@ li {
                 <button style="box-shadow: 2px 2px 2px dodgerblue;" onclick="changeAllImageRelief()">Relief</button>
              
           </div></li>
+          <li><div class="col">
+              
+            <button style="box-shadow: 2px 2px 2px lightcoral;" onclick="changeAllImageSedation()">Sedation</button>
+         
+        </div></li>
               <li><div class="col">
              
-                <button style="box-shadow: 2px 2px 2px orange;" onclick="changeAllImageEuphoria()">Euphoria</button>
+                <button style="box-shadow: 2px 2px 2px lightgreen;" onclick="changeAllImageEuphoria()">Euphoria</button>
               
           </div></li>
-              <li><div class="col">
-                <div class="card-body">
-                    <a class="navbar-brand" href=""><button onclick="changeAllImageBack()">Reset</button></a>
-                  
-              </div></li>
+              
             </ul>
             
             
@@ -273,11 +300,14 @@ li {
                 <div style="display: inline;">
                   <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class=" card-img-top" alt="...">
+                  <img id="myImg" src="images/checkmark1.jpg" class=" card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                  
 
                 </div>
                 <div id="white" class="card-body">
-                  <h4  data-toggle="collapse" data-target="#demo" class="card-title">White Thai</h4>
+                  <button data-toggle="collapse" data-target="#demo" class="card-title2" style="box-shadow: 2px 2px 2px black;">White Thai</button>
+                  
                   <div id="demo" class="collapse">
                     Most euphoric white strain. Caffeine replacement.
                     </div>
@@ -291,11 +321,13 @@ li {
                 <div style="display: inline;">
                   <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                  <img id="myImg" src="images/checkmark1.jpg" class=" card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                  
 
                 </div>
                 <div  id="white" class="card-body">
-                  <h4 data-toggle="collapse" data-target="#demo1" class="card-title">White Borneo</h4>
+                  <button data-toggle="collapse" data-target="#demo1" class="card-title2" style="box-shadow: 2px 2px 2px black;">White Borneo</button>
                   <div id="demo1" class="collapse">
                     Post workout. Long lasting focus and concentration.
                     </div>
@@ -310,10 +342,12 @@ li {
                   <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                   <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                  <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                  
 
                 </div>
                 <div id="white" class="card-body">
-                  <h4 data-toggle="collapse" data-target="#demo2" class="card-title">White Maeng Da</h4>
+                  <button data-toggle="collapse" data-target="#demo2" class="card-title2" style="box-shadow: 2px 2px 2px black;">White Maeng Da</button>
                   <div id="demo2" class="collapse">
                     Most energizing white strain. Pre workout.
                     </div>
@@ -332,11 +366,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="green" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo3" class="card-title">Green Malay</h4>
+                    <button data-toggle="collapse" data-target="#demo3" class="card-title2" style="box-shadow: 2px 2px 2px black;">Green Malay</button>
                     <div id="demo3" class="collapse">
                       Most euphoric and popular green strain. Mood enhancer and alcohol replacement.
                       </div>
@@ -351,10 +387,12 @@ li {
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="green" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo4" class="card-title">Green Bali</h4>
+                    <button data-toggle="collapse" data-target="#demo4" class="card-title2" style="box-shadow: 2px 2px 2px black;">Green Bali</button>
                     <div id="demo4" class="collapse">
                       Tylenol of kratom. Strong relief, low euphoria.
                       </div>
@@ -369,10 +407,12 @@ li {
                     <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="green" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo5" class="card-title">Green Maeng Da</h4>
+                    <button data-toggle="collapse" data-target="#demo5" class="card-title2" style="box-shadow: 2px 2px 2px black;">Green Maeng Da</button>
                     <div id="demo5" class="collapse">
                       Heavy labor. Energy and relief. Similar to White Borneo.
                       </div>
@@ -393,11 +433,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="green" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo6" class="card-title">Green Borneo</h4>
+                    <button data-toggle="collapse" data-target="#demo6" class="card-title2" style="box-shadow: 2px 2px 2px black;">Green Borneo</button>
                     <div id="demo6" class="collapse">
                       Hiking and activities. Strong euphoria and energy.
                       </div>
@@ -411,11 +453,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="green" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo7" class="card-title">Green Vietnam</h4>
+                    <button data-toggle="collapse" data-target="#demo7" class="card-title2" style="box-shadow: 2px 2px 2px black;">Green Vietnam</button>
                     <div id="demo7" class="collapse">
                       Adderall replacement. Powerful stimulant and euphoric effects.
                       </div>
@@ -429,11 +473,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="energy card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="gold" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo8" class="card-title">Gold Bali</h4>
+                    <button data-toggle="collapse" data-target="#demo8" class="card-title2" style="box-shadow: 2px 2px 2px black;">Gold Bali</button>
                     <div id="demo8" class="collapse">
                       Social anxiety. Very euphoric. Alcohol replacement.
                       </div>
@@ -454,11 +500,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="sedation card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="red" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo9" class="card-title">Red Bali</h4>
+                    <button data-toggle="collapse" data-target="#demo9" class="card-title2" style="box-shadow: 2px 2px 2px black;">Red Bali</button>
                     <div id="demo9" class="collapse">
                       Most euphoric red strain. Strong relief and euphoria. Alcohol replacement.
                       </div>
@@ -472,11 +520,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="euphoria card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="red" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo10" class="card-title">Red Maeng Da</h4>
+                    <button data-toggle="collapse" data-target="#demo10" class="card-title2" style="box-shadow: 2px 2px 2px black;">Red Maeng Da</button>
                     <div id="demo10" class="collapse">
                       Daytime pain relief. Low sedation.
                       </div>
@@ -490,11 +540,13 @@ li {
                   <div style="display: inline;">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="relief card-img-top" alt="...">
+                    <img id="myImg" src="images/checkmark1.jpg" class="sedation card-img-top" alt="...">
                     <img id="myImg" src="images/checkmark1.jpg" class="card-img-top" alt="...">
+                    
   
                   </div>
                   <div id="red" class="card-body">
-                    <h4 data-toggle="collapse" data-target="#demo11" class="card-title">Red Bentuangie</h4>
+                    <button data-toggle="collapse" data-target="#demo11" class="card-title2" style="box-shadow: 2px 2px 2px black;">Red Bentuangie</button>
                     <div id="demo11" class="collapse">
                       Highest pain relief. Sleep aid.
                       </div>
@@ -505,7 +557,15 @@ li {
              
             </div>
           </div>
-          
+          <br>
+          <div class="col-md-12">
+            <button data-toggle="collapse" data-target="#demo12" class="card-title2" style="box-shadow: 2px 2px 2px black;">FAQs</button>
+                    
+            
+            <div id="demo12" class="collapse" style="color: white;">
+                      Kratom, or Mitragyna Speciosa, is a natural botanical native to Southeast Asia. It produces a wide range of effects depending on the strain and dose. It is a very popular alcohol alternative and is federally legal.
+                      </div>
+          </div>
 
       
         </div>
@@ -522,7 +582,7 @@ li {
       function changeAllImage() {
          const image = document.querySelectorAll(".energy");
          image.forEach(element => {
-            element.src = 'images/checkmark.png'
+            element.src = 'images/checkmarkenergy.png'
         }); 
       }
    </script>
@@ -549,7 +609,16 @@ li {
       function changeAllImageEuphoria() {
         const image = document.querySelectorAll(".euphoria");
         image.forEach(element => {
-            element.src = 'images/checkmarkeuphoria.png'
+            element.src = 'images/checkmark.png'
+        }); 
+      }
+    </script>
+
+    <script>
+      function changeAllImageSedation() {
+        const image = document.querySelectorAll(".sedation");
+        image.forEach(element => {
+            element.src = 'images/checkmarksedation.png'
         }); 
       }
     </script>

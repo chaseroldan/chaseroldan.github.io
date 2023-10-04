@@ -1,311 +1,317 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Roldan</title>
-  <link rel="icon" type="image/x-icon" href="images/profile-pic1.png">
+  <title>Bootstrap 5 Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    body{
+   font-family: "Dosis",sans-serif;
+  text-align: center;
+  border: 2px solid black; margin: 5%; height: 600px; box-shadow: 3px 3px 3px black;
+  border-radius: 20px;
+  width: 50%;
+  margin: 5% auto;
+}
 
-  h1 {
-    font-size: 50px;
-  }
-
-
-  h3 {
-    text-align: center;
-    margin: 5px;
+#name {
+    padding-top: 10px;
+    font-size: 80px;
     font-weight: bold;
-    font-size: 30px;
-  }
-
-  li {
-    margin: 5px;
-  }
-
-  a {
-    text-decoration:none;
-    color: black;
-  }
-
-  img {
-    margin: 10px;
-    width: 200px;
-  }
-
-  .card-img-top {
-    width: 80%;
-    min-height: 100px;
-    margin: auto;
-  }
-
-  .card {
-    box-shadow: 2px 2px 2px black;
-  }
-
-  /* .carousel-item {
-    width: 100%;
-    
-    
-  }
-
-  .cimage{
-    text-align: center;
-    width: 20%;
-  } */
-
-  #links {
-    width: 20px;
-  }
-
-  #skills {
-    width: 20px;
-  }
-
-  .btn {
-    box-shadow: 2px 2px 2px black;
-  }
-
-
-
-  .col-sm-12 {
-    text-align: center;
-    width: 300px;
-    background-color: white; border-radius: 10px; box-shadow: 2px 2px 2px black; margin: auto;
-    
-  }
-
-  /* .col-sm-12:hover {
-    text-align: center;
-    box-shadow: 5px 5px 5px black;
-    
-  } */
-
-  body {
-    background-color: dodgerblue;
-  }
-
-  #graph {
-    width: 100%;
-  }
-  
-
-  #nav {
-    width: 40px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 5px;
-    box-shadow: 2px 2px 2px black;
-  }
-
-
-
-  section{
-  position: relative;
-  width: 100%;
-  padding: 10px;
-  height: 100px;
-  background: #3586ff;
-  overflow: hidden;
 }
-section .air{
-  position: absolute;
-  bottom: 0;
+
+p {
+    margin-top: 15px;
+}
+
+#nav {
+    width: 20px;
+}
+
+#nav:hover {
+    width: 25px;
+}
+
+#menu {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -75px;
+    list-style: none;
+    font-size: 200%;
+}
+
+.menu-button {
+    opacity: 0;
+    z-index: -1;
+}
+
+.menu-button {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    background-image: url("images/profile-pic1.png");
+    background-size: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 3px 3px 3px black;
+}
+
+.menu-button:hover {
+    box-shadow: 3px 3px 10px black;
+}
+
+#menu:not(:target)>a:first-of-type,
+#menu:target>a:last-of-type {
+    opacity: 1;
+    z-index: 1;
+}
+
+#menu:not(:target)>.icon-plus:before,
+#menu:target>.icon-minus:before {
+    opacity: 1;
+}
+
+.menu-item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 55%;
+    line-height: 5px;
+    top: 10%;
+    margin: -50px 0 0 -50px;
+    border-radius: 50%;
+    background-color: silver;
+    transform: translate(0px, 0px);
+    transition: transform 500ms;
+    z-index: 0;
+    transition: .5s;
+    box-shadow: 3px 3px 3px black; 
+}
+
+.menu-item:hover{
+opacity: 0.5;
+  box-shadow: 3px 3px 10px black; 
+}
+
+
+.menu-item a {
+    color: #fff;
+    position: relative;
+    top: 30%;
+    left: 0;
+    text-decoration: none;
+}
+
+#menu:target>.menu-item:nth-child(6) {
+    transform: rotate(140deg) translateY(-150px) rotate(220deg);
+    transition-delay: 0s;
+}
+
+
+
+
+#menu:target>.menu-item:nth-child(4) {
+    transform: rotate(-140deg) translateY(-150px) rotate(140deg);
+    transition-delay: 0.3s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 100px;
-  background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
-  background-size: 1000px 100px
-}
-section .air.air1{
-  animation: wave 30s linear infinite;
-  z-index: 1000;
-  opacity: 0.7;
-  animation-delay: 0s;
-  bottom: 0;
-}
-section .air.air2{
-  animation: wave2 15s linear infinite;
-  z-index: 999;
-  opacity: 0.5;
-  animation-delay: -5s;
-  bottom: 10px;
-}
-section .air.air3{
-  animation: wave 30s linear infinite;
-  z-index: 998;
-  opacity: 0.2;
-  animation-delay: -2s;
-  bottom: 15px;
-}
-section .air.air4{
-  animation: wave2 5s linear infinite;
-  z-index: 997;
-  opacity: 0.7;
-  animation-delay: -5s;
-  bottom: 20px;
-}
-@keyframes wave{
-  0%{
-    background-position-x: 0px; 
-  }
-  100%{
-    background-position-x: 1000px; 
-  }
-}
-@keyframes wave2{
-  0%{
-    background-position-x: 0px; 
-  }
-  100%{
-    background-position-x: -1000px; 
-  }
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-  @media only screen and (max-width: 600px) {
-  #skills {
-    width: 20px;
-  }
-
-  img {
-    margin: 5px;
-    width: 200px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.sidenav2 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav2 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav2 a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav2 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    #name {
+        padding-top: 50px;
+        font-size: 50px;
+    }
+  }
+
 
 </style>
-</head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html"><img id="nav" src="images/home.png" alt=""></a>
-        <a class="navbar-brand" href="https://github.com/chaseroldan"><img id="nav" src="images/github.png" alt=""></a>
-        <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/linked in.png" alt=""></a>
-      </div>
-      
-    </div>
-  </nav>
-  
-  
-  <div class="container-fluid p-4 bg-dark text-white text-center">
+
+<!-- <div class="container p-5 bg-primary text-white text-center">
+  <h1>Chase Roldan</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+   -->
+<div class="container">
     
-    <h1>Chase Roldan</h1>
-    <img src="images/profile-pic1.png" alt="">
-    <h4>Data Analyst</h4> 
-    <p>MBA with expertise in Python, SQL, JavaScript, Tableau, and more!</p> 
-    
-
-    <!-- <button style="width: 80px; margin-top: 20px;" class="btn btn-light" data-toggle="collapse" data-target="#demo">About</button>
-
-        <div id="demo" class="collapse" style="padding: 15px;">
-          <div class="col-sm-12">
-            <div class="btn-group" style="padding: 10px;">
-              <button type="button" class="btn btn-light"><img id="links" src="images/github.png" alt=""></button>
-              <button type="button" class="btn btn-light"><img id="links" src="images/linked in.png" alt=""></button>
-              <button type="button" class="btn btn-light"><img id="links" src="images/indeed.png" alt=""></button>
-              
-            </div>
-
-          <div style="padding: 10px; color: black; font-weight: bold;">
-              - CSU Chico: BA Psychology & MBA
-            <br>
-            
-            - UC Irvine: Data Analytics Certificate
+  <div class="row">
+    <div class="container">
+        <h1 id="name">Chase Roldan</h1>
+        <div id="myDIV">
+            <nav class="navbar navbar-default" style="margin: auto;">
+                <div class="container">
+                  <div class="navbar-header" style="margin: auto;">
+                    
+                    <a class="navbar-brand" href="https://github.com/chaseroldan"><img id="nav" src="images/github.png" alt=""></a>
+                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/linked in.png" alt=""></a>
+                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/phone.png" alt=""></a>
+                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/gmail.png" alt=""></a>
+                  </div>
+                  
+                </div>
+              </nav>
           </div>
-
-            
-
-
-        </div> -->
-
-    </div>
-    <section>
-    <div class='air air1'></div>
-    <div class='air air2'></div>
-    <div class='air air3'></div>
-    <div class='air air4'></div>
-  
-
+        <ul id="menu">
+              <!-- open-menu id for click event -->
+               <a onclick="myFunction()" class="menu-button icon-plus" id="open-menu" href="#menu" title="Show navigation"></a>
+               <a onclick="myFunction()" class="menu-button icon-minus" id="close-menu" href="#0" title="Hide navigation"></a>
+               <li class="menu-item">
+                   <a href="#menu">
+                       <span class="fa fa-github"></span>
+                   </a>
+               </li>
+               <li class="menu-item">
+                   <a onclick="openNav()" href="#menu">
+                       <p>Data</p>
+                   </a>
+               </li>
+               <li class="menu-item">
+                   <a href="#menu">
+                       <span class="fa fa-instagram"></span>
+                   </a>
+               </li>
+               <li class="menu-item">
+                   <a onclick="openNav2()" href="#menu">
+                       <p>Web</p>
+                   </a>
+               </li>
+           </ul>
+           
   </div>
-  </section>  
-  <div class="container mt-5" style="text-align: center;">
+</div>
 
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Project 1</a>
+    <a href="#">Project 2</a>
+    <a href="#">Project 3</a>
     
-      <div class="row">
-        <div class="col-sm-12">
-          <h3>Data Projects</h3>
+  </div>
 
-        </div>
-      </div>
+  <div id="mySidenav2" class="sidenav2">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+    <a href="#">Project 1</a>
+    <a href="#">Project 2</a>
+    <a href="#">Project 3</a>
+    
+  </div>  
+<script>
+    // When page loads, it will trigger the circle menu
+window.onload = function() {
+    var menuButton = document.getElementById("close-menu");
+    menuButton.click();
+};
 
-      <div class="container mt-5" style="text-align: center;">
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
-        <div class="row">
-          <div class="col-md-12">
-            
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
-                <div class="card">
-                  <img src="images/cokepepsi.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <a href="cokevspepsi.html"><h5 class="card-title">Coca-Cola vs PepsiCo</h5></a>
-                    <p class="card-text">Coca-Cola has a more efficient profit margin than PepsiCo</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="images/applemicrosoft.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <a href="applevsmicro.html"><h5 class="card-title">Apple vs Microsoft</h5></a>
-                    <p class="card-text">Apple generates more revenue and net income than Microsoft</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="images/ncaa.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <a href="ncaabasketball2023.html"><h5 class="card-title">Men's Basketball 2023</h5></a>
-                    <p class="card-text">Winning percentage is correlated with points scored per points allowed</p>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="col">
-                <div class="card">
-                  <img src="images/javascript.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div> -->
-            </div>
-            </div>
-  
-            
-  
-        
-          </div>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
-    <div class="row" style="text-align: center; margin-top: 100px;">
-        <p>Chase Roldan</p>
-    </div>
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
-      
+function openNav2() {
+  document.getElementById("mySidenav2").style.width = "250px";
+}
 
+function closeNav2() {
+  document.getElementById("mySidenav2").style.width = "0";
+}
+</script>
 </body>
 </html>
+
 

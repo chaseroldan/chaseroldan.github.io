@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chase Roldan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+
+@keyframes color {
+  0%   { background: dodgerblue; }
+  20%  { background: silver; }
+  40%  { background: dodgerblue; }
+  60%  { background: silver; }
+  80%  { background: dodgerblue; }
+  100% { background: silver; }
+}
+
+@keyframes color2 {
+  0%   { background: dodgerblue; }
+  
+  100% { background: silver; }
+}
+
+
+    body {
+        
+        text-align: center;
+        padding: 2em;
+    }
+
+    .navbar {
+        background-color: black;
+        box-shadow: 7px 7px 3px black;
+        
+    }
+
+    .row {
+        padding: 20px;
+    }
+
+    .row:hover {
+        
+    }
+
+    #images{
+        width: 50%;
+        max-width: 200px;
+        
+    }
+
+    #images:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        
+    }
+
+    #projects {
+        width: 70%;
+        max-width: 150px;
+        margin: 15px;
+    }
+
+    #projects:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    .btn {
+
+      width: 100px;
+      box-shadow: 3px 3px 3px black;
+    }
+
+    h3 {
+      font-size: 12px;
+      padding-top: 5px;
+    }
+    
+    /* .row {
+        border: 5px solid black;
+        margin: 20px auto 50px auto;
+        padding: 10px;
+        box-shadow: 7px 7px 3px black;
+    } */
+
+    .accordion {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 5px 18px 0px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+opacity: 90%;
+}
+
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+color: white;
+font-weight: bold;
+font-size: 20px;
+text-shadow: 3px 3px 2px black;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+margin-bottom: 20px;
+padding: 5px 5px 5px 5px;
+border: 3px solid black;
+box-shadow: 10px 10px 3px black;
+
+}
+
+.container1:hover .overlay {
+  opacity: 1;
+
+}
+
+.container1:hover {
+
+box-shadow: 3px 3px 3px black;
+}
+
+#strains {
+width: 80%;
+margin: 0px auto 40px auto;
+border: 5px solid black;
+padding: 40px;
+box-shadow: 10px 10px 3px black;
+background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+text-align: center;
+}
+
+.text {
+font-weight: bold;
+margin: 40% auto 10px auto;
+}
+
+.btn {
+  
+  
+   
+}
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  #strains {
+    width: 90%;
+    
+  }
+
+  .text {
+font-weight: bold;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+  .centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+color: white;
+font-weight: bold;
+font-size: 70%;
+text-shadow: 3px 3px 2px black;
+}
+
+.btn {
+ 
+  
+  
+}
+}
+
+@media only screen and (max-width: 500px) {
+  #strains {
+    width: 90%;
+    
+  }
+
+  .text {
+    font-size: 10px;
+    margin: 0% auto 10px auto;
+  }
+
+  .centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+color: white;
+font-weight: bold;
+font-size: 100%;
+text-shadow: 3px 3px 2px black;
+}
+
+.btn {
+ 
+
+}
+}
+
+    
+
+</style>
+<body>
+    <div class="container mt-3 mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/kratom/kratomlogo.png" alt="Avatar Logo" style="width:80px;" > 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <p>dadsg</p>
+                                    
+                                </a>
+                            </li>
+                            
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Locations</a>
+                          <ul class="dropdown-menu" style="text-align: center;">
+                            <li><a class="dropdown-item" href="#"><p>1</p></a></li>
+                            <li><a class="dropdown-item" href="#"><p>2</p></a></li>
+                            <li><a class="dropdown-item" href="#"><p>3</p></a></li>
+                            <li><a class="dropdown-item" href="#"><p>4</p></a></li>
+                              
+                          </ul>
+                      </li> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">How to Use</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                            <li><a class="dropdown-item" href="#"><p>How to Use</p></a></li>
+                            
+                            </ul>
+                        </li>
+                         
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">Cart</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container" style="margin-top: 40px;">
+            <div class="row">
+              <div id="strains" class="container-fluid mt-3" >
+                <h1 style="margin-top: 0px;">Products</h1>
+
+                <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Powder')">Powder</button>
+        <button class="tablinks" onclick="openCity(event, 'Capsules')">Capsules</button>
+        <button class="tablinks" onclick="openCity(event, 'Tablets')">Tablets</button>
+    </div>
+  
+  <!-- Tab content -->
+  <div id="Powder" class="tabcontent">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Thai</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Caffeine Replacement</div>
+              <br>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Borneo</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Post-Workout Recovery</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Maeng Da</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Pre-Workout</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Malay</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Most Euphoric</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Borneo</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Hiking and Activities</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Bali</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Pain Relief</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Vietnam</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Focus and Concentration</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Maeng Da</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Heavy Labor</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bali</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief and Euphoria</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Maeng Da</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief without Sedation</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bentuangie</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Sleep Aid</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Gold Bali</div>
+              <div class="overlay" style="border: 6px solid gold;">
+              <div class="text">Alcohol Replacement</div>
+              <select name="cars" id="cars">
+
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  
+  <div id="Capsules" class="tabcontent">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Thai</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Caffeine Replacement</div>
+              <br>
+              <select name="cars" id="cars">
+                  <option value="30">30</option>
+                  <option value="65">65</option>
+                  <option value="150">150</option>
+              </select>
+              
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Borneo</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Post-Workout Recovery</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Maeng Da</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Pre-Workout</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Malay</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Most Euphoric</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Borneo</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Hiking and Activities</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Bali</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Pain Relief</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Vietnam</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Focus and Concentration</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Maeng Da</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Heavy Labor</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bali</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief and Euphoria</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Maeng Da</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief without Sedation</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bentuangie</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Sleep Aid</div>
+              <select name="cars" id="cars">
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Gold Bali</div>
+              <div class="overlay" style="border: 6px solid gold;">
+              <div class="text">Alcohol Replacement</div>
+              <select name="cars" id="cars">
+
+                <option value="30">30</option>
+                <option value="65">65</option>
+                <option value="150">150</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      
+  
+    
+  </div>
+  </div>
+  <div id="Tablets" class="tabcontent">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Thai</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Caffeine Replacement</div>
+              <br>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Borneo</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Post-Workout Recovery</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">White Maeng Da</div>
+              <div class="overlay" style="border: 6px solid silver;">
+              <div class="text">Pre-Workout</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Malay</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Most Euphoric</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Borneo</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Hiking and Activities</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Bali</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Pain Relief</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Vietnam</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Focus and Concentration</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Green Maeng Da</div>
+              <div class="overlay" style="border: 6px solid darkgreen;">
+              <div class="text">Heavy Labor</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bali</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief and Euphoria</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Maeng Da</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Relief without Sedation</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Red Bentuangie</div>
+              <div class="overlay" style="border: 6px solid crimson;">
+              <div class="text">Sleep Aid</div>
+              <select name="cars" id="cars">
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="container1">
+                <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
+              <div class="centered">Gold Bali</div>
+              <div class="overlay" style="border: 6px solid gold;">
+              <div class="text">Alcohol Replacement</div>
+              <select name="cars" id="cars">
+
+                  <option value="1/2">1/2 oz</option>
+                  <option value="1">1 oz</option>
+                  <option value="16">1 lb</option>
+              </select>
+              <button class="btn btn-dark"><h3>Add</h3></button>
+              </div>
+          
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+                
+              
+        </div>
+    </div>
+    
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+</script>
+</body>
+</html>
+
+

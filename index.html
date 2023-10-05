@@ -8,398 +8,240 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
-    body{
-   font-family: "Dosis",sans-serif;
-  text-align: center;
-  border: 2px solid black; margin: 5%; height: 600px; box-shadow: 3px 3px 3px black;
-  border-radius: 20px;
-  width: 50%;
-  margin: 5% auto;
-}
 
-#name {
-    padding-top: 10px;
-    font-size: 80px;
-    font-weight: bold;
-}
-
-p {
-    margin-top: 20px;
-}
-
-#nav {
-    width: 20px;
-}
-
-#nav:hover {
-    width: 25px;
-}
-
-#skills {
-  width: 25px;
-}
-
-#menu {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -75px 0 0 -75px;
-    list-style: none;
-    font-size: 200%;
-}
-
-.menu-button {
-    opacity: 0;
-    z-index: -1;
-}
-
-.menu-button {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    background-image: url("images/profile-pic1.png");
-    background-size: 100%;
-    overflow: hidden;
-    text-decoration: none;
-    box-shadow: 6px 6px 6px black;
-}
-
-.menu-button:hover {
-    box-shadow: 3px 3px 10px black;
-}
-
-#menu:not(:target)>a:first-of-type,
-#menu:target>a:last-of-type {
-    opacity: 1;
-    z-index: 1;
-}
-
-#menu:not(:target)>.icon-plus:before,
-#menu:target>.icon-minus:before {
-    opacity: 1;
-}
-
-.menu-item {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 55%;
-    line-height: 5px;
-    top: 10%;
-    margin: -50px 0 0 -50px;
-    border-radius: 50%;
-    background-color: silver;
-    transform: translate(0px, 0px);
-    transition: transform 500ms;
-    z-index: 0;
-    transition: .5s;
-    box-shadow: 3px 3px 3px black; 
-}
-
-.menu-item:hover{
-opacity: 0.5;
-  box-shadow: 3px 3px 10px black; 
-}
-
-
-.menu-item a {
-    color: #fff;
-    position: relative;
-    top: 30%;
-    left: 0;
-    text-decoration: none;
-}
-
-#menu:target>.menu-item:nth-child(6) {
-    transform: rotate(140deg) translateY(-150px) rotate(220deg);
-    transition-delay: 0s;
-}
-
-
-
-
-#menu:target>.menu-item:nth-child(4) {
-    transform: rotate(-140deg) translateY(-150px) rotate(140deg);
-    transition-delay: 0.3s;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-.sidenav2 {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav2 a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav2 a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav2 .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-#gradient
-{
-    
-    background: linear-gradient(130deg, black, darkgray, silver);
-    background-size: 200% 200%;
-
-    -webkit-animation: Animation 3s ease infinite;
-    -moz-animation: Animation 3s ease infinite;
-    animation: Animation 3s ease infinite;
-}
-
-@-webkit-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@-moz-keyframes Animation {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@keyframes Animation { 
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-
-
-
-
-
-.text-rainbow-animation {
-  
-  font-size:40px;
-  background-image: 
-    linear-gradient(to right, black,darkgray,silver); 
-  -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-  animation: rainbow-animation 160s linear infinite;
-}
-
-@keyframes rainbow-animation {
-    to {
-        background-position: 4500vh;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
     body {
-        
-        width: 90%;
-        margin: 100px auto;
+        background-color: dodgerblue;
     }
 
-    #name {
-        padding-top: 60px;
-        font-size: 50px;
+    .navbar {
+        background-color: black;
+        
+    }
+
+    .row {
+        background-color: white;
+    }
+
+    .row:hover {
+        box-shadow: none;
+    }
+
+    #images{
+        width: 50%;
+        max-width: 200px;
+        
+    }
+
+    #images:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        
+    }
+
+    #projects {
+        width: 70%;
+        max-width: 150px;
+        margin: 15px;
+    }
+
+    #projects:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 40px;
     }
 
     p {
-      padding-top: 25px;
+        font-weight: bold;
+    }
+    
+    .row {
+        border: 5px solid black;
+        margin: 20px auto 50px auto;
+        padding: 10px;
+        box-shadow: 7px 7px 3px black;
     }
 
-    #menu {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    margin: -75px 0 0 -75px;
-    list-style: none;
-    font-size: 200%;
+    .accordion {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
-  }
 
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 5px 18px 0px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+    
 
 </style>
 <body>
-  
-
-<!-- <div class="container p-5 bg-primary text-white text-center">
-  <h1>Chase Roldan</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-   -->
-<div class="container">
-    
-  <div class="row">
-    <div class="container">
-        <h1 class="text-rainbow-animation" id="name">Chase Roldan</h1>
-        <div id="myDIV" style="border: 5px solid black; border-radius: 10px; box-shadow: 3px 3px 3px black; width: 70%; margin: auto;">
-            <nav class="navbar navbar-default" style="margin: auto;">
-                <div class="container">
-                  <div class="navbar-header" style="margin: auto;">
-                    
-                    <a class="navbar-brand" href="https://github.com/chaseroldan"><img id="nav" src="images/github.png" alt=""></a>
-                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/linked in.png" alt=""></a>
-                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/phone.png" alt=""></a>
-                    <a class="navbar-brand" href="https://www.linkedin.com/in/chaseroldan/"><img id="nav" src="images/gmail.png" alt=""></a>
-                  </div>
-                  
+    <div class="container mt-3 mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/profile-pic1.png" alt="Avatar Logo" style="width:60px;" class="rounded-pill"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="images/github.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                    <img src="images/linked in.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                    <img src="images/gmail.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Skills</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                            <li><a class="dropdown-item" href="#"><p>Data Analytics</p></a></li>
+                            <li><a class="dropdown-item" href="#"><p>Web Development</p></a></li>
+                            
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Technology</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="images/excel.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                        <img src="images/SQL.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                        <img src="images/tableau.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                        <img src="images/python-logo.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                        <img src="images/javascript.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                        <img src="images/bootstrap.png" alt="Avatar Logo" style="width:30px; margin: 5px;" class="rounded-pill">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Education</a>
+                            <ul class="dropdown-menu" style="text-align: center;">
+                                <li><a class="dropdown-item" href="#"><p>MBA</p></a></li>
+                                <li><a class="dropdown-item" href="#"><p>BA Psychology</p></a></li>
+                        
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-              </nav>
-              <h5 style="font-weight: bold;">MBA | BA Psychology</h5>
-              <marquee width="60%" direction="left" height="30%">
-                <img id="skills" src="images/excel.png" alt="">
-                <img id="skills" src="images/python-logo.png" alt="">
-                <img id="skills" src="images/SQL.png" alt="">
-                <img id="skills" src="images/javascript.png" alt="">
-                <img id="skills" src="images/bootstrap.png" alt="">
-                <img id="skills" src="images/tableau.png" alt="">
-                </marquee>
-          </div>
-        <ul id="menu">
-              <!-- open-menu id for click event -->
-               <a onclick="myFunction()" class="menu-button icon-plus" id="open-menu" href="#menu" title="Show navigation"></a>
-               <a onclick="myFunction()" class="menu-button icon-minus" id="close-menu" href="#0" title="Hide navigation"></a>
-               <li class="menu-item">
-                   <a href="#menu">
-                       <span class="fa fa-github"></span>
-                   </a>
-               </li>
-               <li class="menu-item" id="gradient">
-                
-                   <a onclick="openNav()" href="#menu">
+            </div>
+        </nav>
+
+
+        <div class="container" style="margin-top: 40px;">
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center; padding: 50px;">
+                    <h1>Data Analysis</h1>
+                    <img data-bs-toggle="collapse" data-bs-target="#demo" id="images" src="images/data.png" alt="">
                     
-                       <p>Data</p>
-                   </a>
-               </li>
-               <li class="menu-item">
-                   <a href="#menu">
-                       <span class="fa fa-instagram"></span>
-                   </a>
-               </li>
-               <li class="menu-item" id="gradient">
-                   <a onclick="openNav2()" href="#menu">
-                       <p>Web</p>
-                   </a>
-               </li>
-           </ul>
-           
-  </div>
-  
-</div>
+                </div>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Project 1</a>
-    <a href="#">Project 2</a>
-    <a href="#">Project 3</a>
-    
-  </div>
+                <div id="demo" class="collapse">
+                    <div class="row" style="text-align: center;">
+                        <button class="accordion">Project 1</button>
+                        <div class="panel">
+                        <p>An analysis of...</p>
+                        </div>
 
-  <div id="mySidenav2" class="sidenav2">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
-    <a href="#">Project 1</a>
-    <a href="#">Project 2</a>
-    <a href="#">Project 3</a>
-    
-  </div>  
-  <section>
-    <div class='air air1'></div>
-    <div class='air air2'></div>
-    <div class='air air3'></div>
-    <div class='air air4'></div>
-  </section>  
-  
+                        <button class="accordion">Project 2</button>
+                        <div class="panel">
+                        <p>An analysis of...</p>
+                        </div>
 
+                        <button class="accordion">Project 3</button>
+                        <div class="panel">
+                        <p>An analysis of...</p>
+                        </div>
+                    </div>
+                </div>
 
+                
+            </div>
 
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center; padding: 50px;">
+                    <h1>Web Development</h1>
+                    <img data-bs-toggle="collapse" data-bs-target="#demo2" id="images" src="images/web.png" alt="">
+                    
+                </div>
+
+                <div id="demo2" class="collapse">
+                    <div class="row" style="text-align: center;">
+                        <button class="accordion">Project 1</button>
+                        <div class="panel">
+                        <p>Designed to...</p>
+                        </div>
+
+                        <button class="accordion">Project 2</button>
+                        <div class="panel">
+                        <p>Designed to...</p>
+                        </div>
+
+                        <button class="accordion">Project 3</button>
+                        <div class="panel">
+                        <p>Designed to...</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
 <script>
-    // When page loads, it will trigger the circle menu
-window.onload = function() {
-    var menuButton = document.getElementById("close-menu");
-    menuButton.click();
-};
+    var acc = document.getElementsByClassName("accordion");
+var i;
 
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-function openNav2() {
-  document.getElementById("mySidenav2").style.width = "250px";
-}
-
-function closeNav2() {
-  document.getElementById("mySidenav2").style.width = "0";
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 </body>
 </html>
+
+

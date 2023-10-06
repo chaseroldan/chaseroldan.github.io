@@ -199,8 +199,9 @@ text-shadow: 3px 3px 2px black;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
+  height: 98%;
+  width: 98%;
+  margin: auto;
   opacity: 0;
   transition: .5s ease;
   background-color: black;
@@ -253,10 +254,10 @@ text-align: center;
 
 .text {
 font-weight: bold;
-margin: 0% auto 0px auto;
+margin: 15px 10px;
 background-color: black;
 color: white;
-padding: 15px;
+padding: 3px;
 }
 
 .btn {
@@ -295,7 +296,8 @@ h2 {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: black;
+  color: white;
 }
 
 /* Create an active/current tablink class */
@@ -359,6 +361,46 @@ h2 {
   margin: 0px auto 25px auto;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: silver; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgray; 
+}
+
+div.scrollmenu {
+  
+  overflow: auto;
+  
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
 
 @media only screen and (max-width: 1100px) {
   #strains {
@@ -373,13 +415,13 @@ h2 {
   outline: none;
   cursor: pointer;
   padding: 10px 5px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   transition: 0.3s;
 }
 
   #main {
-  margin: 25% auto 10% auto; height: 100%; width: 100%;
+  margin: 20% auto 10% auto; height: 100%; width: 100%;
 }
 
   .text {
@@ -420,7 +462,7 @@ h3 {
   }
 
   #main {
-  margin: 30% auto 10% auto; height: 100%; width: 100%;
+  margin: 20% auto 0% auto; height: 100%; width: 100%;
 }
 
 
@@ -431,7 +473,7 @@ h3 {
   outline: none;
   cursor: pointer;
   padding: 10px 5px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -442,7 +484,7 @@ h3 {
   .text {
     font-size: 15px;
     font-weight: bold;
-    margin: 0% auto 30px auto;
+    margin: 0% auto 0px auto;
   }
 
   .centered {
@@ -488,7 +530,7 @@ margin: 5px auto 15% auto;
                             <ul class="dropdown-menu" style="text-align: center;">
                             <li>
                                 <a class="dropdown-item" href="#">
-                                    <p>Open since... mission is...</p>
+                                    <p>Hours... Established...Deals</p>
                                     
                                 </a>
                             </li>
@@ -525,17 +567,21 @@ margin: 5px auto 15% auto;
 
 <div id="main" class="container-fluid">
   <div class="row">
-      <div id="strains" class="container-fluid mt-3" >
-        <a href="project-kratom.html"><h1 style="margin-top: 0px; color: white;">Products</h1></a>                                  
+      <div id="strains" class="container-fluid" >
+        <a href="project-kratom.html"><h1 style="margin: 0px; color: white;">Products</h1></a>                                  
 
                 <!-- Tab links -->
-          <div class="tab">
+          <div class="tab" >
+            <div class="scrollmenu">
               <button class="tablinks" onclick="openCity(event, 'Powder')">Powder</button>
               <button class="tablinks" onclick="openCity(event, 'Capsules')">Capsules</button>
               <button class="tablinks" onclick="openCity(event, 'Tablets')">Tablets</button>
               <button class="tablinks" onclick="openCity(event, 'Extracts')">Extracts</button>
               <button class="tablinks" onclick="openCity(event, 'Drinks')">Drinks</button>
+              <button class="tablinks" onclick="openCity(event, 'Coffee')">Tea & Coffee</button>
+              <button class="tablinks" onclick="openCity(event, 'Tea')">ME Collection</button>
               <button class="tablinks" onclick="openCity(event, 'Candy')">Candy</button>
+            </div>  
           </div>
   
 <div class="tabcontent" style="display: contents;">
@@ -618,7 +664,7 @@ margin: 5px auto 15% auto;
                   <div class="container1">
                         <img src="images/kratom/kratom3.jpg" alt="Avatar" class="image">
                       <div class="centered">White Thai</div>
-                      <div class="overlay" id="white-strain">
+                      <div class="overlay"  id="white-strain">
                       
                       <div class="text">Caffeine Replacement
                         <p id="ratings">Relief 1 | Relax 1 | Energy 4 | Euphoria 4</p>

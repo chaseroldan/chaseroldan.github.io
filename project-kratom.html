@@ -25,9 +25,21 @@
 }
 
 
+  @keyframes saturate {
+    0% {
+        filter: saturate(4);
+    }
+    50% {
+        filter: saturate(70%);
+    }
+    100% {
+        filter: saturate(4);
+    }
+}
+
     body {
         background-image: url("images/kratom/kratom2.jpg");
-        
+         animation: saturate 6s ease infinite;
         text-align: center;
         padding: 1px 5px 1px 5px;
     }

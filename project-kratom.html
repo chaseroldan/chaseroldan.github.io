@@ -27,13 +27,13 @@
 
   @keyframes saturate {
     0% {
-        filter: saturate(4);
+        backdrop-filter: saturate(4);
     }
     50% {
-        filter: saturate(70%);
+        backdrop-filter: saturate(70%);
     }
     100% {
-        filter: saturate(4);
+        backdrop-filter: saturate(4);
     }
 }
 
@@ -500,14 +500,25 @@ h3 {
   margin: 20% auto 0% auto; height: 100%; width: 100%;
 }
 
-body {
-background-size: 250%;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: saturate 6s ease infinite;
-  
-  
+@keyframes saturate {
+    0% {
+        backdrop-filter: saturate(4);
+    }
+    50% {
+        backdrop-filter: saturate(70%);
+    }
+    100% {
+        backdrop-filter: saturate(4);
+    }
 }
+
+    body {
+        background-image: url("images/kratom/kratom2.jpg");
+         animation: saturate 6s ease infinite;
+        text-align: center;
+        padding: 1px 5px 1px 5px;
+    }
+
   
 .tab {
   width: 100%;

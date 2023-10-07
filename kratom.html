@@ -1,38 +1,372 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>javascript change image onclick event
-</title>
-<style type="text/css">
-	h2 {
-    text-align: center;
-    font-size: 30px;
-	}
-	img#getImage {
-    width: 300px;
-    height: auto;  
-    border: 4px solid #a1a1a1;  
-	}
-	div {
-    text-align: center;
-	}
-</style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+<style>
+
+body {
+background-image: url("images/kratom2.jpg");
+background-size: 200%;
+background-repeat: no-repeat;
+}
+
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+opacity: 80%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+color: white;
+font-weight: bold;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+margin: 10px;
+padding: 5px 5px 5px 5px;
+border: 3px solid black;
+box-shadow: 10px 10px 3px black;
+}
+
+.container1:hover .overlay {
+  opacity: 1;
+
+}
+
+.container1:hover {
+
+box-shadow: 3px 3px 3px black;
+}
+
+#strains {
+width: 60%;
+margin: 0px auto 40px auto;
+border: 5px solid black;
+padding: 40px;
+box-shadow: 10px 10px 3px black;
+background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+text-align: center;
+}
+
+#arrows {
+background-color: black;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+p {
+	text-align: center;
+
+}
+
+#banner {
+    background-image: url("images/kratom/kratom2.jpg");
+    
+    height: 310px;
+    text-align: center;
+}
+
+#logo {
+    margin-top: 30px;
+padding: 20px;
+width: 300px;
+opacity: 100%;
+box-shadow: 7px 7px 3px black;
+}
+
+#gradient
+{
+    
+    background: linear-gradient(130deg, black, darkgray, silver);
+    background-size: 200% 200%;
+
+    -webkit-animation: Animation 3s ease infinite;
+    -moz-animation: Animation 3s ease infinite;
+    animation: Animation 3s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+@media only screen and (max-width: 1000px) {
+  #strains {
+    width: 90%;
+  }
+}
+</style>
 <body>
-	<div>
-        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
-        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
-        <img class="myImg" src="images/checkmark1.jpg" width="75%" alt="" srcset="" />
-        <button onclick="changeAllImage()">Change Image</button>
+
+<div id="banner">
+    <img id="logo" class="bg-dark" src="images/kratom/kratomlogo.png" alt="">
+    
+
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
+    <div class="collapse navbar-collapse" id="mynavbar">
+      
+	<ul class="navbar-nav me-auto">
+        	<li class="nav-item">
+          		<a class="nav-link" href="javascript:void(0)">Locations</a>
+        	</li>
+        	<li class="nav-item">
+          		<a class="nav-link" href="javascript:void(0)">How to Use</a>
+        	</li>
+        	<li class="nav-item">
+         	 	<a class="nav-link" href="javascript:void(0)">Strains</a>
+        	</li>
+		<li class="nav-item dropdown">
+  			<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+ 				 <ul class="dropdown-menu">
+    					<li><a class="dropdown-item" href="#">Powder</a></li>
+    					<li><a class="dropdown-item" href="#">Capsules</a></li>
+    					<li><a class="dropdown-item" href="#">Tablets</a></li>
+  				</ul>
+		</li>
+      </ul>
+	<a class="navbar-brand" href="javascript:void(0)">Login</a>
+      <a class="navbar-brand" href="javascript:void(0)">Cart</a>
     </div>
-    <script>
-        function changeAllImage() {
-           const image = document.querySelectorAll(".myImg");
-           image.forEach(element => {
-              element.src = 'images/checkmark.png'
-          }); 
-        }
-     </script>
+  </div>
+</nav>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" id="demo">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Heading</h1>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Some text lorem ipsum.</p>
+    <p>Some text lorem ipsum.</p>
+    <button class="btn btn-success" type="button">A Button</button>
+  </div>
+</div>
+
+<div style="text-align: center;">
+<!-- Button to open the offcanvas sidebar -->
+<button class="btn btn-success"  style="text-align: center; margin: 40px auto 50px auto; box-shadow: 3px 3px 3px black" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  Deals
+</button>
+</div>
+
+
+<div id="strains" class="container-fluid mt-3"  style="text-align: center;">
+
+<h1>Products</h1>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="padding:10px;">
+      <img src="images/kratom/building.jpg" class="d-block" style="width: 50%; margin: auto; box-shadow: 10px 10px 3px black; " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" style="padding:10px;">
+      <img src="images/kratom/building.jpg" class="d-block" style="width: 50%; margin: auto;  box-shadow: 10px 10px 3px black; " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" style="padding:10px;">
+      <img src="images/kratom/building.jpg" class="d-block" style="width: 50%; margin: auto;  box-shadow: 10px 10px 3px black; " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" >
+    <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div>
+	<div id="strains" class="container-fluid mt-3" >
+		<h1 style="margin-top: 0px;">Varieties</h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: green;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: green;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: green;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: crimson;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: crimson;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="container1">
+  						<img src="images/kratom/building.jpg" alt="Avatar" class="image">
+						<div class="centered">Name</div>
+  					<div class="overlay" style="background-color: crimson;">
+						<div class="text">Hello World</div>
+  					</div>
+        
+  				</div>
+			</div>
+		</div>
+
+
+	</div>
+  
+</div>
 
 </body>
 </html>
+
+

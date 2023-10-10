@@ -9,13 +9,14 @@
 </head>
   <style>
 body {
-  padding:15px;
+  
   background-image: url("images/kratom/kratom-background.png");
   background-size: stretch;
 }
     
 #title {
 width: 100%;
+  margin: 15px;
 }
 
     #title-background {
@@ -24,10 +25,32 @@ width: 100%;
       background-color: black;
     }
 
+    @media only screen and (max-width: 600px) {
+  body {
+    background-image: url("images/kratom/kratom-background.png");
+  background-size: stretch;
+  }
+
+      
+#title {
+width: 100%;
+  margin: 15px;
+}
+
+    #title-background {
+      background-image: url("images/kratom/IMG_1059.jpeg"),  url("images/kratom/IMG_1061.jpeg");
+      background-position: left center, right center;
+      background-color: black;
+    }
+
+
+      
+}
+
     
   </style>
 <body>
-
+<div id="main">
 <div id="title-background"   class="container-fluid p-5 text-white text-center">
   <img id="title" src="images/kratom/IMG_1026.jpeg"></img>
   <p>Costa Mesa</p> 
@@ -52,6 +75,6 @@ width: 100%;
     </div>
   </div>
 </div>
-
+</div>
 </body>
 </html>

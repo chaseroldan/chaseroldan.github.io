@@ -267,7 +267,7 @@ div.scroll-container img {
 </div>
 
 <!-- Use any element to open/show the overlay navigation menu -->
-<span onclick="openNav()">open</span>
+<h1 onclick="openNav()">Full Menu</h1>
         
         
         <div class="img-magnifier-container">
@@ -351,7 +351,7 @@ function closeNav() {
     if (y < h / zoom) {y = h / zoom;}
     /* Set the position of the magnifier glass: */
     glass.style.left = (x - w) + "px";
-    glass.style.top = (y - h) - 40 + "px";
+    glass.style.top = (y - h) - 50 + "px";
     /* Display what the magnifier glass "sees": */
     glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) + 10 - h + bw) + "px";
   }

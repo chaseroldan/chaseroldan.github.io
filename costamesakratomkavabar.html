@@ -322,7 +322,7 @@ function closeNav() {
     glass.style.left = (x - w) + "px";
     glass.style.top = (y - h) + "px";
     /* Display what the magnifier glass "sees": */
-    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + 30 + "px";
   }
 
   function getCursorPos(e) {

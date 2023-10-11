@@ -319,14 +319,14 @@ function closeNav() {
     if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
     if (y < h / zoom) {y = h / zoom;}
     /* Set the position of the magnifier glass: */
-    glass.style.left = (x - w) + 25 + "px";
+    glass.style.left = (x - w) + "px";
     glass.style.top = (y - h) + "px";
     /* Display what the magnifier glass "sees": */
     glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
   }
 
   function getCursorPos(e) {
-    var a, x = 0, y = 0;
+    var a, x = 0, y = 2;
     e = e || window.event;
     /* Get the x and y positions of the image: */
     a = img.getBoundingClientRect();

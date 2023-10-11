@@ -1,202 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Kratom Kava Bar Costa Mesa</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-  <style>
-
-
-    @media only screen and (max-width: 800px) {
-  body {
-    background-image: url("images/kratom/IMG_1089.jpeg");
-  background-size: stretch;
-  
-  }
-
-  #main {
-    
-    margin: 20px;
-    background-image: url("images/kratom/kratom-background-white.png");
-  }
-
-      #banner {
-
-        width: 100%;
-        margin: 5px auto 5px auto;
-        
-      }
-
-       #banner-background {
-       background-image: url("images/kratom/kratom-background.png");
-       background-position: center;
-      background-size: 60%;
-      height: 100px;
-      color: black;
-    }
-
-
-    #title-background {
-      background-image: url("images/kratom/IMG_3286.jpeg");
-      background-position: center;
-      background-size: stretch;
-      background-image-repeat: no repeat;
-      height: 100px;
-      color: black;
-    }
-      
-    #hours {
-
-      margin: auto;
-      width: 50%;
-      
-    }
-
-#strains {
-width: 100%;
-  
-  margin: auto;
-  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Lato', sans-serif;
 }
 
-      
-  * {box-sizing: border-box;}
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
 
-.img-magnifier-container {
+.overlay-content {
   position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.img-magnifier-glass {
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
   position: absolute;
-  border: 3px solid #000;
-  border-radius: 0%;
-  cursor: none;
-  /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 100px;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 
-    
-  </style>
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
 <body>
-  
-<div id="banner-background"   class="container text-white text-center">
-  
-  <img id="banner" src="images/kratom/IMG_1026.jpeg">
-  
-</div>
-
-  
-
-<div id="title-background"   class="container text-white text-center">
-  
-  
-  <img id="hours" src="images/kratom/IMG_1105.png">
-  
-  
-  
-</div>
-
-<div class="img-magnifier-container">
-  <img id="myimage" src="images/kratom/IMG_0945.jpeg" width="300" height="450" alt="Girl">
-</div>
-
-
-   
-
- 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <img class=""
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img src="images/kratom/IMG_0945.jpeg">
   </div>
 </div>
-</div>
+
+<h2>Kratom Kava Bar</h2>
+<img src="images/kratom/capsules.png" style="margin: auto; width: 70%;">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
 <script>
-
-   function magnify(imgID, zoom) {
-  var img, glass, w, h, bw;
-  img = document.getElementById(imgID);
-
-  /* Create magnifier glass: */
-  glass = document.createElement("DIV");
-  glass.setAttribute("class", "img-magnifier-glass");
-
-  /* Insert magnifier glass: */
-  img.parentElement.insertBefore(glass, img);
-
-  /* Set background properties for the magnifier glass: */
-  glass.style.backgroundImage = "url('" + img.src + "')";
-  glass.style.backgroundRepeat = "no-repeat";
-  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-  bw = 3;
-  w = glass.offsetWidth / 2;
-  h = glass.offsetHeight / 2;
-
-  /* Execute a function when someone moves the magnifier glass over the image: */
-  glass.addEventListener("mousemove", moveMagnifier);
-  img.addEventListener("mousemove", moveMagnifier);
-
-  /*and also for touch screens:*/
-  glass.addEventListener("touchmove", moveMagnifier);
-  img.addEventListener("touchmove", moveMagnifier);
-  function moveMagnifier(e) {
-    var pos, x, y;
-    /* Prevent any other actions that may occur when moving over the image */
-    e.preventDefault();
-    /* Get the cursor's x and y positions: */
-    pos = getCursorPos(e);
-    x = pos.x;
-    y = pos.y;
-    /* Prevent the magnifier glass from being positioned outside the image: */
-    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-    if (x < w / zoom) {x = w / zoom;}
-    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-    if (y < h / zoom) {y = h / zoom;}
-    /* Set the position of the magnifier glass: */
-    glass.style.left = (x - w) + "px";
-    glass.style.top = (y - h) + "px";
-    /* Display what the magnifier glass "sees": */
-    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-  }
-
-  function getCursorPos(e) {
-    var a, x = 0, y = 0;
-    e = e || window.event;
-    /* Get the x and y positions of the image: */
-    a = img.getBoundingClientRect();
-    /* Calculate the cursor's x and y coordinates, relative to the image: */
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /* Consider any page scrolling: */
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return {x : x, y : y};
-  }
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
 }
-  
 
-/* Execute the magnify function: */
-magnify("menu", 2);
-/* Specify the id of the image, and the strength of the magnifier glass: */
-
-  
-  
-  
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
 </script>
+     
 </body>
 </html>

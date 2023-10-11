@@ -62,6 +62,27 @@ body {
   padding: 5px;
 }
 
+
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 300px;
+  height: 300px;
+}
+
+  
 @media screen and (max-height: 450px) {
   .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
@@ -95,11 +116,44 @@ body {
     <img src="images/kratom/powder.png" alt="Forest" style="width:100%">
   </div>
  </div>
-  <div class="row">
-    <img src="images/kratom/IMG_0985.jpeg" style="width:100%">
-  </div>
+  <div class="img-zoom-container">
+  <img id="myimage" src="images/kratom/IMG_0985.jpeg" width="300" height="240">
+  <div id="myresult" class="img-zoom-result"></div>
 </div>
+</div>
+  
+
 <script>
+  function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+
+  imageZoom("myimage", "myresult");
 function openNav() {
   document.getElementById("myNav").style.height = "100%";
 }

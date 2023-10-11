@@ -43,7 +43,8 @@
       background-image: url("images/kratom/IMG_3286.jpeg");
       background-position: center;
       background-size: stretch;
-      height: 150px;
+      background-image-repeat: no repeat;
+      height: 100px;
       color: black;
     }
       
@@ -61,28 +62,21 @@ width: 100%;
   
 }
 
-      #menu {
-width: 300px;
-height: 450px;    
-  
-  margin: auto;
-  
+      
+  * {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
 }
 
-      .img-magnifier-container {
-      position: relative;
-        padding: 20px;
-        
-      }
-
-     .img-magnifier-glass {
+.img-magnifier-glass {
   position: absolute;
-  border: 2px solid black;
-  border-radius: 0%;
+  border: 3px solid #000;
+  border-radius: 50%;
   cursor: none;
   /*Set the size of the magnifier glass:*/
-  width: 70%;
-  height: 150px;
+  width: 400px;
+  height: 500px;
 }
 
     
@@ -106,11 +100,14 @@ height: 450px;
   
 </div>
 
-<div   class="img-magnifier-container text-center">
- <img id="menu" src="images/kratom/IMG_0945.jpeg">
-  
+<div class="img-magnifier-container">
+  <img id="myimage" src="images/kratom/IMG_0945.jpeg" width="600" height="400" alt="Girl">
 </div>
-  
+
+
+   
+
+ 
 <div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
@@ -130,7 +127,8 @@ height: 450px;
 </div>
 </div>
 <script>
-function magnify(imgID, zoom) {
+
+   function magnify(imgID, zoom) {
   var img, glass, w, h, bw;
   img = document.getElementById(imgID);
 
@@ -152,7 +150,8 @@ function magnify(imgID, zoom) {
   /* Execute a function when someone moves the magnifier glass over the image: */
   glass.addEventListener("mousemove", moveMagnifier);
   img.addEventListener("mousemove", moveMagnifier);
- /*and also for touch screens:*/
+
+  /*and also for touch screens:*/
   glass.addEventListener("touchmove", moveMagnifier);
   img.addEventListener("touchmove", moveMagnifier);
   function moveMagnifier(e) {
@@ -188,11 +187,11 @@ function magnify(imgID, zoom) {
     y = y - window.pageYOffset;
     return {x : x, y : y};
   }
-  }
+}
   
 
 /* Execute the magnify function: */
-magnify("menu", 1.5);
+magnify("menu", 2);
 /* Specify the id of the image, and the strength of the magnifier glass: */
 
   

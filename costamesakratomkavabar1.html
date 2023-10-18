@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Kratom Kava Bar</title>
+  <title>Bootstrap 5 Website Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <style>
+
     body {
         background-image: url("images/kratom-background-green.jpeg");
         background-size: 700%;
         max-width: 100%;
         margin: auto;
 
+    }
+
+    #main {
+        width: 70%;
+        margin: auto;
+        padding: 50px;
     }
 
     #title-container {
@@ -32,35 +39,88 @@
    
 
     .navbar {
-        margin-top: 2%;
-        margin-left: 1%;
-      margin-right: 5px;
-        z-index: 1;
-        width: min-content;
-      
-      
+        background-color: transparent;
+        color: white;
+        margin-top: 20px;
        
         
     }
 
-    button.navbar-toggler {
+    button.navbar-toggler-icon {
+        color: white;
+        
+
+    }
+
+    .offcanvas {
+        background-color: silver;
+       border: none;
+        height: min-content;
+        box-sizing: none;
+        background-image: url("images/green-decor.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        
+    }
+
+    .offcanvas-body {
+        background-color: transparent;
+        border: none;
+        position: center;
+        
+    }
+
+    #cart {
+        background-color: rgba(255, 255, 255, 0.749);
+        padding: 20px;
+        border: 3px solid black;
+        box-shadow: 7px 7px 3px black;
+        margin: 10%;
+    }
+
+    #nav {
+        background-color: rgba(255, 255, 255, 0.749);
+        padding: 20px;
+        border: 3px solid black;
+        box-shadow: 7px 7px 3px black;
+        
+        
+        margin: 10%;
+        
+    }
+
+    .nav-link {
         color: black;
-        background-color: black;
+        background-color: white;
+        text-align: center;
+        float: right;
+        width: 55px;
+        
+    }
+
+    .btn {
+        box-shadow: 3px 3px 3px black;
+    }
+
+    div.scroll-container {
+    background-color: silver;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
     }
 
-    
-    .dropdown-menu {
-    margin-right:-1000px;
-      background-color: black;
-      margin-left: 7px;
-      
-      
-}
+    div.scroll-container img {
+      padding: 10px;
+    }
 
-.dropdown-menu > li {
-    display: inline-block;
-}
+    #products {
+        width: 60%;
+    }
+    
 
     
     
@@ -69,21 +129,21 @@
         border: none;
     }
 
-    
+    .dropdown-menu {
+        
+        
+        
+    }
 
     .dropdown-item {
         color: white;
-      
-        width: 50%;
+        width: 70%;
         padding: 0%;
-        margin: 3px;
-      text-align: center;
-      box-shadow: 7px 7px 3px black;
+        margin-top: 5px;
     }
 
     .dropdown-item:hover {
-        background-color: transparent;
-        color: transparent;
+        
     }
 
     
@@ -96,24 +156,12 @@
         width: 30%;
         max-width: 250px;
         margin: auto;
-      filter: invert(1);
+        filter: invert();
         
     }
 
-    div.scroll-container {
-  background-color: black;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
-
-div.scroll-container img {
-  padding: 10px;
-  border: 5px solid silver;
-}
-
     #content-container {
-        background-color: white;
+        background-image: url("images/kratom-background-white.png");
         background-size: cover;
         width: 90%;
         margin: auto;
@@ -131,6 +179,7 @@ div.scroll-container img {
         margin: 20px auto 20px auto;
         box-shadow: 15px 15px 3px black;
         border: 2px solid black;
+        
     }
 
     .carousel-indicators {
@@ -138,24 +187,20 @@ div.scroll-container img {
         width: min-content;
         margin: 20px auto 0px auto;
         padding: 1px;
+        opacity: 30%;
         
     }
 
     #product-container {
-        width: 90%;
+        width: 80%;
         margin: 10% auto 10% auto;
-      
-      
     }
 
-    
     #strains-container {
-        width: 90%;
-        margin: auto;
-      box-shadow: 15px 15px 3px black;
-      
-      
+        box-shadow: 15px 15px 3px black;
     }
+    
+  
 
     
 
@@ -168,30 +213,27 @@ div.scroll-container img {
         outline: none;
         cursor: pointer;
         padding: 11px 16px;
-        font-size: 12px;
-        width: 25%;
-      
+        font-size: 17px;
+        width: 20%;
         
         
         
     }
 
     .tablink:hover {
-        color: black;
+        background-color: darkgray;
         
     }
 
     /* Style the tab content (and add height:100% for full page content) */
     .tabcontent {
-        background-color: white;
+        background-image: url("images/kratom-background-white.png");
         
-        
-      
-        height: 100%;
-      
-      
-      max-height: 400px;
-      overflow: scroll;
+        display: none;
+        padding: 20px 20px;
+        height: 400px;
+        overflow: scroll;
+        overflow-x: hidden;
        
     
         
@@ -199,15 +241,25 @@ div.scroll-container img {
 
     /* #Home {background-color: silver;}
     #News {background-color: darkgreen;}
-    #Contact {background-color: salmon;}
-    #About {background-color: goldenrod;} */
+    #Contact {background-color: crimson;}
+    #About {background-color: gold;} */
     .card-img-top {
         width: 100%;
+      height: 150px;
+        
+        
+        
     }
 
     .card {
-        margin-top: 25px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         box-shadow: 15px 15px 3px black;
+        text-align: center;
+        border: 5px solid black;
+        
+        
+        
     }
 
     
@@ -215,11 +267,7 @@ div.scroll-container img {
     
 
     #footer {
-    background-image: url("images/yellowtop.png"), url("images/yellowtopreverse.png");
-    
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: bottom left, top right;
+    background-color: black;
    
     }
 
@@ -234,778 +282,1086 @@ div.scroll-container img {
         transform: scale(1.3);
     }
 
-    #display {
-    width: 70%;
-      margin:auto;
-      box-shadow: 15px 15px 3px black;
-    }
 
-    #carousel-item {
-    height: 300px;
-      width: 360px;
+    @media only screen and (max-width: 800px) {
+  
+    #main {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
     }
-
+    }
 
 
   </style>
 </head>
 <body>
+<div id="main">
+
+
+   
 
     <div id="title-container" class="p-5 text-center">
-        <img id="title" src="images/title.jpeg" alt="">
+        
+            <img id="title" src="images/title.jpeg" alt="">
+            
+          
+        
     </div>
 
+    <nav class="navbar navbar-expand-sm sticky-top">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            
 
-    <nav class="navbar navbar-dark sticky-top p-3">
+            <button class="navbar-toggler-icon btn btn-light p-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+            
+            </button>
+          </div>
+
+          <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            Cart
+            </button>
+          
+          
+        </div>
+      </nav>
+
+      <!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start text-center" id="demo">
+    <div class="offcanvas-header">
+      
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="cart">
+        <h2>Cart:</h2>
+        <br>
+        <p>Product 1 | $$$</p>
+        <p>Product 2 | $$$</p>
+        <p>_______________</p>
         
+        <h4>Total: $$$</h4>
+        <button class="btn btn-success mt-3" type="button">Checkout</button>
+    </div>
+    </div>
+  </div>
 
-            <div class="dropdown dropend">
-                <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">About</a></li>
-                  <li><a class="dropdown-item" href="#">Locations</a></li>
-                  <li><a class="dropdown-item" href="#">Products</a></li>
-                </ul>
-              </div>
 
-              
-
-              <div class="modal" id="gallery" >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-              
-                   <img src="images/menu-price.jpeg" style="width: 100%;" alt="">
-              
-                  </div>
-                </div>
-              </div>
-       
-        
-    </nav>
+  <div class="offcanvas offcanvas-end text-center" id="demo2">
+    <div class="offcanvas-header">
+      
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="nav">
+            <button class="btn btn-dark mt-3" type="button">Home</button>
+            <br>
+            <button class="btn btn-dark mt-3" type="button">About</button>
+            <br>
+            <button class="btn btn-dark mt-3" type="button">Locations</button>
+            <br>
+            <button class="btn btn-dark mt-3" type="button">Store</button>
+      </div>
+    </div>
+  </div>
 
     
 
-  
-  
-  <div class="scroll-container">
-    <img src="images/IMG_0972.jpeg" alt="Northern Lights" width="500" height="320">
-  <img src="images/IMG_1154.jpeg" alt="Cinque Terre" width="500" height="320">
-  <img src="images/IMG_1155.jpeg" alt="Forest" width="500" height="320">
-  <img src="images/IMG_1156.jpeg" alt="Northern Lights" width="500" height="320">
-    <img src="images/IMG_0940.jpeg" alt="Cinque Terre" width="500" height="320">
-  
-  
-  
-  </div>
-  <div id="content-container" class="container mt-5">
-
-    <div class="row">
-      <div id="logo-container">
-    <a href="#"><img id="logo" src="images/logo.png" alt=""></a>
+    <div id="logo-container">
+        <a href="#"><img id="display" src="images/IMG_0940.jpeg" alt=""></a>
     </div>
-        <div id="menu-container" class="col-md-12">
 
-            <!-- Carousel -->
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-                
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img id="menu" src="images/menu-large.jpeg" alt="Los Angeles" class="d-block" data-bs-toggle="modal" data-bs-target="#menu1">
-                        <div class="modal" id="menu1">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                
-                               <img src="images/menu-large.jpeg" style="width: 100%;" alt="">
-                          
-                              </div>
+
+
+
+    <div id="content-container" class="container mt-5">
+
+        <div class="row">
+            <div id="logo-container">
+                <a href="#"><img id="logo" src="images/logo.png" alt=""></a>
+            </div>
+            <div id="menu-container" class="col-md-12">
+
+                <!-- Carousel -->
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="menu" src="images/menu-large.jpeg" alt="Los Angeles" class="d-block" data-bs-toggle="modal" data-bs-target="#menu1">
+                            <div class="modal" id="menu1">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    
+                                <img src="images/menu-large.jpeg" style="width: 100%;" alt="">
+                            
+                                </div>
+                                </div>
                             </div>
-                          </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img id="menu" src="images/menu-price.jpeg" alt="Chicago" class="d-block" data-bs-toggle="modal" data-bs-target="#menu2">
+                            <div class="modal" id="menu2">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                <img src="images/menu-price.jpeg" style="width: 100%;" alt="">
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
                     </div>
 
-                    <div class="carousel-item">
-                        <img id="menu" src="images/menu-price.jpeg" alt="Chicago" class="d-block" data-bs-toggle="modal" data-bs-target="#menu2">
-                        <div class="modal" id="menu2">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                          
-                               <img src="images/menu-price.jpeg" style="width: 100%;" alt="">
-                          
-                              </div>
-                            </div>
-                          </div>
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
                     </div>
+                    
 
                     
                     
                 </div>
+                <!-- End Carousel -->
 
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                </div>
-                
+            </div>
 
-                
+            <div class="scroll-container">
+                <img id="products" src="images/capsules.png" alt="Capsules">
+                <img id="products" src="images/powder.png" alt="Powder">
+                <img id="products" src="images/drinks.png" alt="Drinks">
                 
             </div>
-            <!-- End Carousel -->
 
         </div>
 
     </div>
 
-</div>
 
 
 
 
 
 
-<div id="product-container">
-    <div id="strains-container" class="col-md-12">
+    <div id="product-container">
+        
+        <div id="strains-container" class="col-md-12">
 
-        <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">White</button>
-        <button class="tablink" onclick="openPage('News', this, 'darkgreen')">Green</button>
-        <button class="tablink" onclick="openPage('Contact', this, 'salmon')">Red</button>
-        <button class="tablink" onclick="openPage('About', this, 'goldenrod')">Gold</button>
+            <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">White</button>
+            <button class="tablink" onclick="openPage('News', this, 'darkgreen')">Green</button>
+            <button class="tablink" onclick="openPage('Contact', this, 'salmon')">Red</button>
+            <button class="tablink" onclick="openPage('About', this, 'goldenrod')">Gold</button>
+            <button class="tablink" onclick="openPage('Other', this, 'lightblue')">Other</button>
 
-        <div id="Home" class="tabcontent">
-            <div class="container mt-5">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-white-thai.jpeg" data-bs-toggle="modal" data-bs-target="#myModal1">
-                        <div class="modal" id="myModal1">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-white-thai.jpeg" data-bs-toggle="modal" data-bs-target="#myModal1">
-                       
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+            <div id="Home" class="tabcontent">
+                <div class="container mt-3">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-white-thai.jpeg" data-bs-toggle="modal" data-bs-target="#myModal1">
+                            <h4>Caffeine Replacement</h4>
+                            
+                            
+                            <div class="modal" id="myModal1">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-white-thai.jpeg" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                        
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-white-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2">
-                        <div class="modal" id="myModal2">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-white-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
-
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-white-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3">
-                        <div class="modal" id="myModal3">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-white-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
-
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>  
-
-<!-- Green Strains -->
-
-        <div id="News" class="tabcontent">
-            <div class="container mt-5">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-green-malay.jpeg" data-bs-toggle="modal" data-bs-target="#myModal4">
-                        <div class="modal" id="myModal4">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-green-malay.jpeg" data-bs-toggle="modal" data-bs-target="#myModal4">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
-
-                                <div class="modal-footer">
-                                
-                                
+                                    <div class="modal-footer">
                                     <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal5">
-                        <div class="modal" id="myModal5">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal5">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-white-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            <h4>Post-Workout</h4>
+                            <div class="modal" id="myModal2">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-white-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal6">
-                        <div class="modal" id="myModal6">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal6">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-white-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            <h4>Pre-Workout</h4>
+                            <div class="modal" id="myModal3">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-white-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal7">
-                        <div class="modal" id="myModal7">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal7">
-                        
-                                
                                 </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
-
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal8">
-                        <div class="modal" id="myModal8">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal8">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
-
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
-                            </div>
-                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-        </div>
-<!-- Red Strains -->
-        <div id="Contact" class="tabcontent">
-            <div class="container mt-5">
-                <div class="row">
-                  
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-red-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal9">
-                        <div class="modal" id="myModal9">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                
-                                    <img class="card-img-top" src="images/strain-red-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal9">
-                       
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+            </div>  
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+    <!-- Green Strains -->
+
+            <div id="News" class="tabcontent">
+                <div class="container mt-3">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-malay.jpeg" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            <h4>Most Euphoric</h4>
+                            <div class="modal" id="myModal4">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-malay.jpeg" data-bs-toggle="modal" data-bs-target="#myModal4">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    
+                                    
+                                        <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-red-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal10">
-                        <div class="modal" id="myModal10">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-red-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal10">
-                        
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            <h4>Pain Relief</h4>
+                            <div class="modal" id="myModal5">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal5">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-red-ben.jpeg" data-bs-toggle="modal" data-bs-target="#myModal11">
-                        <div class="modal" id="myModal11">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-red-ben.jpeg" data-bs-toggle="modal" data-bs-target="#myModal11">
-                       
-                                
-                                </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            <h4>Heavy Labor</h4>
+                            <div class="modal" id="myModal6">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal6">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            <h4>Active Activities</h4>
+                            <div class="modal" id="myModal7">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal7">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            <h4>Concentration and Focus</h4>
+                            <div class="modal" id="myModal8">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal8">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-              </div>
-        </div>
+            </div>
+    <!-- Red Strains -->
+            <div id="Contact" class="tabcontent">
+                <div class="container mt-3">
+                    <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-red-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal9">
+                            <h4>Euphoria and Relief</h4>
+                            <div class="modal" id="myModal9">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                    
+                                        <img class="card-img-top" src="images/strain-red-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal9">
+                        
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
-<!-- Gold Strains -->
-
-        <div id="About" class="tabcontent">
-            <div class="container mt-5">
-                <div class="row">
-                  
-                  
-                  <div class="col-md-4">
-                    <div class="card" style="width:100%">
-                        <img class="card-img-top" src="images/strain-gold-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal12">
-                        <div class="modal" id="myModal12">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                        
-                                <!-- Modal Header -->
-                                <div class="modal-header">
-                                    <img class="card-img-top" src="images/strain-gold-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal12">
-                        
-                                
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
                                 </div>
-                        
-                                <!-- Modal body -->
-                                <div class="modal-body">
-                                <p>Powder</p>
-                                <input type="range" class="form-range" min="14" max="1000">
-                                
-                                <p>Capsules</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>30 | $16</option>
-                                    <option>65 | $32</option>
-                                    <option>150 | $60</option>
-                                    <option>300 | $105</option>
-                                    <option>600 | $185</option>
-                                </select>
-                                
-                                <p>Tablets</p>
-                                <select class="form-select">
-                                    <option>0</option>
-                                    <option>50 | $16</option>
-                                    <option>100 | $32</option>
-                                    <option>250 | $60</option>
-                                    <option>500 | $105</option>
-                                    <option>1000 | $185</option>
-                                </select>
                                 </div>
-
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
-                                </div>
-                        
-                            </div>
                             </div>
                         </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-        </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-red-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            <h4>Relaxation, No Sedation</h4>
+                            <div class="modal" id="myModal10">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-red-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal10">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
 
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-red-ben.jpeg" data-bs-toggle="modal" data-bs-target="#myModal11">
+                            <h4>Sleep Aid</h4>
+                            <div class="modal" id="myModal11">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-red-ben.jpeg" data-bs-toggle="modal" data-bs-target="#myModal11">
+                        
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Gold Strains -->
+
+            <div id="About" class="tabcontent">
+                <div class="container mt-3">
+                    <div class="row">
+                    
+                    
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-gold-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            <h4>Alcohol Replacement</h4>
+                            <div class="modal" id="myModal12">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-gold-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal12">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Capsules</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tablets</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="Other" class="tabcontent">
+                <div class="container mt-3">
+                    <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/powder.png" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            <h4>Extracts</h4>
+                            <div class="modal" id="myModal13">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/powder.png" data-bs-toggle="modal" data-bs-target="#myModal13">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Green Extract</p>
+                                    <input type="range" class="form-range" min="1" max="1000">
+
+                                    <p>Gold Extract</p>
+                                    <input type="range" class="form-range" min="1" max="1000">
+
+                                    <p>Red Extract</p>
+                                    <input type="range" class="form-range" min="1" max="1000">
+
+                                    <p>Black Extract</p>
+                                    <input type="range" class="form-range" min="1" max="1000">
+
+                                    <p>Liquid Extract</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>1 | $35</option>
+                                        <option>2 | $70</option>
+                                        <option>3 | $105</option>
+                                        <option>4 | $140</option>
+                                        <option>5 | $175</option>
+                                    </select>
+                                    
+                                    
+
+                                    <div class="modal-footer">
+                                    
+                                    
+                                        <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal14">
+                            <h4>Coffee and Tea</h4>
+                            <div class="modal" id="myModal14">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-bali.jpeg" data-bs-toggle="modal" data-bs-target="#myModal14">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    
+                                    
+                                    <p>Coffee Pods</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Tea Bags - Green</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+
+                                    <p>Tea Bags - Red</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal15">
+                            <h4>Candy</h4>
+                            <div class="modal" id="myModal15">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-maeng-da.jpeg" data-bs-toggle="modal" data-bs-target="#myModal15">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                
+                                    
+                                    <p>Cherry Lolipop</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>1 | $5</option>
+                                        <option>2 | $10</option>
+                                        <option>3 | $15</option>
+                                        <option>4 | $20</option>
+                                        <option>5 | $25</option>
+                                    </select>
+                                    
+                                    <p>Passionfruit Hard Candy</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>1 | $5</option>
+                                        <option>2 | $10</option>
+                                        <option>3 | $15</option>
+                                        <option>4 | $20</option>
+                                        <option>5 | $25</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal16">
+                            <h4>ME Collection</h4>
+                            <div class="modal" id="myModal16">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-borneo.jpeg" data-bs-toggle="modal" data-bs-target="#myModal16">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>Powder</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>Delta 8 - Mango</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>30 | $16</option>
+                                        <option>65 | $32</option>
+                                        <option>150 | $60</option>
+                                        <option>300 | $105</option>
+                                        <option>600 | $185</option>
+                                    </select>
+                                    
+                                    <p>Delta 8 - Watermelon</p>
+                                    <select class="form-select">
+                                        <option>0</option>
+                                        <option>50 | $16</option>
+                                        <option>100 | $32</option>
+                                        <option>250 | $60</option>
+                                        <option>500 | $105</option>
+                                        <option>1000 | $185</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-17">
+                        <div class="card" style="width:100%">
+                            <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal17">
+                            <h4>Delta 8</h4>
+                            <div class="modal" id="myModal8">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                            
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <img class="card-img-top" src="images/strain-green-vietnam.jpeg" data-bs-toggle="modal" data-bs-target="#myModal17">
+                            
+                                    
+                                    </div>
+                            
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                    <p>ME Collection - Skinny Me</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>ME Collection - Sex Me Up</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    
+                                    <p>ME Collection - Ache Me Not</p>
+                                    <input type="range" class="form-range" min="14" max="1000">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dimdiss="modal">Add to Cart</button>
+                                    </div>
+                            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
 
-<div id="footer" class="mt-5 p-4 text-white text-center">
-  <img style="width: 40%;" src="images/capsules.png" alt="">
-</div>
-
+    <div id="footer" class="mt-5 text-white text-center">
+    <p>Kratom Kava Bar</p>
+    </div>
+</div> 
 <script>
     function openPage(pageName,elmnt,color) {
       var i, tabcontent, tablinks;

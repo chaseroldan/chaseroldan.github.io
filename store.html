@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kratom Kava Bar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+
+    body {
+        background-image: url("images/kratom-background-green.jpeg");
+       
+        background-size: 700%;
+       
+        max-width: 100%;
+        margin: auto;
+
+    }
+
+    #main {
+        
+        width: 70%;
+        margin: auto;
+        padding: 50px;
+    }
+
+    .row {
+        margin: 0px;
+    }
+
+    p {
+        margin: 20px;
+        font-size:  15px;
+        color: white;
+    }
+
+    h4 {
+        font-size: 20px;
+        color: white;
+    }
+
+    #logo {
+       text-align: center;
+       margin: 30px auto 50px auto;
+    }
+
+    .btn{
+        margin: 30px 10px 30px 10px;
+        width: fit-content;
+        box-shadow: 5px 5px 3px black;
+        font-size: 20px;
+        background-color: black;
+        color: white;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    
+
+    #button-menu {
+        text-align: center;
+        
+    }
+
+    #button-menu2 {
+        text-align: left;
+        width: min-content;
+        position: absolute;
+        
+    }
+
+    #items-white {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-green {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-red {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-gold {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-extracts {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-other {
+        margin-top: 5px;
+        margin: 5px;
+        text-align: center;
+        width: 65px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+    }
+
+    #items-white:hover {
+        
+        color: silver;
+       
+    }
+
+    #items-green:hover {
+        
+        color: darkgreen;
+        
+    }
+
+    #items-red:hover {
+       
+        color: salmon;
+        
+    }
+
+    #items-gold:hover {
+        
+        color: goldenrod;
+        
+    }
+
+    #items-extracts:hover {
+       
+        color: lightgrey;
+       
+    }
+
+    #items-other:hover {
+        
+        color: black;
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: darkgray;
+    }
+
+    
+
+    html {
+        height:100%;
+    }
+
+    body { height:100%;
+    background-color: #fcfcfc;
+
+    }
+
+    .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: fit-content;
+    max-height: 400px;
+    background-color: transparent;
+    
+    }
+
+    .offcanvas {
+        background-color: silver;
+       border: none;
+        height: min-content;
+        box-sizing: none;
+        background-image: url("images/green-decor-reverse.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        
+    }
+
+    .offcanvas-end {
+        background-color: silver;
+       border: none;
+        height: min-content;
+        box-sizing: none;
+        background-image: url("images/green-decor.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+
+   
+
+    .offcanvas-body {
+        background-color: transparent;
+        border: none;
+        position: center;
+        
+    }
+
+    #demo3 {
+        margin: auto;
+        margin-top: 0px;
+        height: 700px;
+        max-width: 800px;
+        
+    }
+
+    #demo4 {
+        margin: auto;
+        margin-bottom: 0px;
+        height: 800px;
+        max-width: 800px;
+        
+    }
+
+    #about {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.222);
+        padding: 20px;
+    }
+
+    div.scroll-container {
+    background-color: transparent;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    
+    }
+
+    div.scroll-container img {
+      margin: 20px;
+    }
+
+    
+
+    .tablink {
+        background-color: silver;
+        color: black;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 11px 16px;
+        font-size: 17px;
+        width: 20%;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        
+        
+    }
+
+    .tablink:hover {
+        background-color: darkgray;
+        
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+        background-image: url("images/kratom-background-white.png");
+        
+        display: inline;
+        padding: 20px 20px;
+        height: 600px;
+        
+        overflow: scroll;
+        overflow-x: hidden;
+       
+    
+        
+    }
+
+    /* #Home {background-color: silver;}
+    #News {background-color: darkgreen;}
+    #Contact {background-color: crimson;}
+    #About {background-color: gold;} */
+    .card-img-top {
+        width: 100%;
+        min-height: 200px;
+      max-height: 200px;
+        
+        
+        
+    }
+
+    .card {
+        margin: 10px auto 10px auto;
+        
+        box-shadow: 5px 5px 3px black;
+        text-align: center;
+        
+        max-width: 250px;
+        min-width: 100px;
+        
+    }
+
+    #card-button {
+        margin: 0px auto 10px auto;
+    }
+
+    .card-img-overlay {
+        margin-top: 50%;
+    }
+
+    
+    h6 {
+        margin-top: 5px;
+        font-size: 130%;
+        font-family: Arial, Helvetica, sans-serif;
+    
+    }
+
+    h1 {
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+  
+
+    h2 {
+        background-color: black;
+        padding: 20px;
+        width: 80%;
+        font-weight: bold;
+        margin: auto;
+    }
+
+    h5 {
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #section1 {
+        background-color: white;
+        color: white;
+       
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #section2 {
+        background-color: darkgreen;
+        color: white;
+       
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #section3 {
+        background-color: salmon;
+        color: white;
+        
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #section4 {
+        background-color: goldenrod;
+        color: white;
+        
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #section5 {
+        background-color: lightgray;
+        color: white;
+        
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #section6 {
+        background-color: darkgrey;
+        color: white;
+        
+        box-shadow: 5px 5px 3px black;
+    }
+
+    #products {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 3px;
+        
+    }
+
+    #product-label {
+        margin-top: 0px;
+        width: 200px;
+        height: 30px;
+    }
+
+    #add-to-cart {
+        background-color: green;
+    }
+
+    
+
+
+
+
+    @media only screen and (max-width: 800px) {
+  
+    #main {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+    }
+
+
+  </style>
+</head>
+<body>
+<div id="main">
+
+
+   
+
+    <div id="logo">
+        
+            <img src="images/kratom/logo.png" alt="">
+            
+            <p>3313 Hyland Costa Mesa, CA ...</p>
+            
+          
+        
+    </div>
+
+   
+
+
+
+    <div  class="center">
+
+        <div id="button-menu">
+        <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo">About</button>
+        <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo2">Gallery</button>
+        <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo3">Menu</button>
+        <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#demo4">Shop</button>
+        </div>
+
+        <div class="offcanvas offcanvas-start text-center" id="demo">
+                <div class="offcanvas-header">
+                
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                </div>
+                
+                <div class="offcanvas-body">
+                    <div id="about">
+                        <h2>About</h2>
+                        <br>
+                        <h4>Kratom Kava Bar was established...</h4>
+                        <h4>Locations include...</h4>
+                        <h4>All products are lab....</h4>
+                        
+                        </div>
+                </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end text-center" id="demo2">
+            <div class="offcanvas-header">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row">
+                    <div class="scroll-container">
+                        <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                        <img id="products" src="images/kratom/product1.jpeg" alt="Capsules">
+                        
+                        <img id="products" src="images/kratom/product2.jpeg" alt="Powder">
+                        
+                    </div>
+        
+                </div>
+            </div>
+          </div>
+
+          <div class="offcanvas offcanvas-top text-center" id="demo3">
+            <div class="offcanvas-header">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row">
+                    <img src="images/kratom/menu-large.jpeg" alt="">
+        
+                </div>
+            </div>
+          </div>
+
+          <div class="offcanvas offcanvas-bottom text-center" id="demo4">
+            <div class="offcanvas-header">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="row sticky-top">
+                <div id="button-menu2">
+                    <a href="#section1"><button id="items-white" type="button" class="btn">White</button></a>
+                    <a href="#section2"><button id="items-green" type="button" class="btn">Green</button></a>
+                    <a href="#section3"><button id="items-red" type="button" class="btn">Red</button></a>
+                    <a href="#section4"><button id="items-gold" type="button" class="btn">Gold</button></a>
+                    <a href="#section5"><button id="items-extracts" type="button" class="btn">Extracts</button></a>
+                    <a href="#section6"><button id="items-other" type="button" class="btn">Other</button></a>
+                </div>
+
+            </div>
+            <div class="offcanvas-body" style="padding-top: 0px; margin-top: 0px; padding: 30px;">
+                
+                
+                <div>
+
+                    
+                    
+
+                      <div id="section1" class="container-fluid" style="padding:40px 20px;">
+                        <h2>White Strains</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    
+                                    <div class="card" style="width:fit-content;">
+                                        <img id="products" class="card-img-top" src="images/kratom/strain-white.jpg" alt="Drinks">
+                                        <div class="card-img-overlay">
+                                            
+                                            
+                                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal1">
+                                                White Thai
+                                              </button>
+                                            
+                                        </div>
+                                        <p style="font-size: 15px; font-weight: bold; color: black; margin: 0px;">Caffeine Replacement</p>
+                                        <p style="font-size: 10px; font-weight: bold; color: black; margin-top: 0px;">Relief 1 | Relax 1 | Energy 4 | Euphoria 4</p>
+                                        
+    
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    
+                                    <div class="card" style="width:fit-content;">
+                                        <img id="products" class="card-img-top" src="images/kratom/strain-white.jpg" alt="Drinks">
+                                        <div class="card-img-overlay">
+                                            
+                                            <a href="#" class="btn">White Borneo</a>
+                                        </div>
+                                        <p style="font-size: 15px; font-weight: bold; color: black; margin: 0px;">Post-Workout</p>
+                                        <p style="font-size: 10px; font-weight: bold; color: black; margin-top: 0px;">Relief 1 | Relax 1 | Energy 4 | Euphoria 4</p>
+    
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    
+                                    <div class="card" style="width:fit-content;">
+                                        <img id="products" class="card-img-top" src="images/kratom/strain-white.jpg" alt="Drinks">
+                                        <div class="card-img-overlay">
+                                            
+                                            <a href="#" class="btn">White Maeng Da</a>
+                                        </div>
+                                        <p style="font-size: 15px; font-weight: bold; color: black; margin: 0px;">Pre-Workout</p>
+                                        <p style="font-size: 10px; font-weight: bold; color: black; margin-top: 0px;">Relief 1 | Relax 1 | Energy 4 | Euphoria 4</p>
+    
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                      </div>
+                      
+                      <div id="section2" class="container-fluid" style="padding:40px 20px;">
+                        <h2>Green Strains</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                
+                              </div>
+                        </div>
+                      </div>
+                      
+                      <div id="section3" class="container-fluid" style="padding:40px 20px;">
+                        <h2>Red Strains</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+                      <div id="section4" class="container-fluid" style="padding:40px 20px;">
+                        <h2>Gold Strains</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+                      <div id="section5" class="container-fluid" style="padding:40px 20px;">
+                        <h2>Extracts</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                
+                              </div>
+                        </div>
+                      </div>
+
+                      <div id="section6" class="container-fluid" style="padding:40px 20px;">
+                        <h2>Other</h2>
+                        <div class="scroll-container">
+                            <div class="row" style="width: max-content;">
+                                
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                <div class="col">
+                                    <img id="products" src="images/kratom/product3.jpeg" alt="Drinks">
+                                </div>
+                                
+                              </div>
+                        </div>
+                      </div>
+                      
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog">
+            <div class="modal-content">
+        
+               
+        
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <h1>White Thai</h1>
+                    <p style="font-size: 18px; font-weight: bold; color: black; margin-top: 0px; text-align: center;">Relief 1 | Relax 1 | Energy 4 | Euphoria 4</p>
+                
+                <h5>Powder</h5>
+                <select class="form-select">
+                    <option>0</option>
+                    <option>10 grams | $</option>
+                    <option>20 grams | $</option>
+                    <option>30 grams | $</option>
+                    <option>40 grams | $</option>
+                    <option>50 grams | $</option>
+                    
+                </select>
+                
+                <h5>Capsules</h5>
+                <select class="form-select">
+                    <option>0</option>
+                    <option>30 | $16</option>
+                    <option>65 | $32</option>
+                    <option>150 | $60</option>
+                    <option>300 | $105</option>
+                    <option>600 | $185</option>
+                </select>
+                
+                <h5>Tablets</h5>
+                <select class="form-select">
+                    <option>0</option>
+                    <option>50 | $16</option>
+                    <option>100 | $32</option>
+                    <option>250 | $60</option>
+                    <option>500 | $105</option>
+                    <option>1000 | $185</option>
+                </select>
+                </div>
+
+                <div class="modal-footer">
+                <button id="add-to-cart" type="button" class="btn btn-success" data-bs-dilgiss="modal">Add to Cart</button>
+                </div>
+        
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="images/kratom/store2.JPG" alt="">
+        </div>
+          
+    
+</div>
+
+
+
+
+
+
+    
+
+
+
+            
+
+
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>    
+</body>
+</html>
